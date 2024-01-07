@@ -1,0 +1,33 @@
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: toRem(5);
+	&__item {
+		position: relative;
+		&:not(:last-child) {
+			padding-right: toRem(25);
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: toRem(18);
+				height: toRem(18);
+				background: url("../icons/arrow-right.svg") center no-repeat;
+			}
+		}
+	}
+	&__link {
+		transition: color 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--brandy);
+			}
+		}
+		&--active {
+			pointer-events: none;
+		}
+	}
+}

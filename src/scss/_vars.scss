@@ -1,0 +1,27 @@
+// Fonts
+$fontMain: "Satoshi";
+$fontSecondary: "Integral CF";
+$fontSize: toRem(16);
+
+// Colors
+:root {
+	--primary: #000;
+	--secondary: rgba(0, 0, 0, 0.6);
+	--white: #fff;
+	--gallery: #f0f0f0;
+}
+
+// Adaptive grid
+$minWidth: 320;
+$maxWidth: 1440;
+$maxWidthContainer: 1240;
+$containerOffset: 15;
+$containerWidth: calc($maxWidthContainer + ($containerOffset * 2));
+
+// Breakpoints
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+
+// Other

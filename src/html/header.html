@@ -1,0 +1,55 @@
+<header class="header">
+	<div class="header__overlay"></div>
+	<div class="header__container">
+		<div class="header__left">
+			<button type="button" class="header__burger burger"><span></span></button>
+			<a href="#" class="header__logo logo">SHOP.CO</a>
+		</div>
+		<div class="header__menu menu">
+			<nav class="menu__body" title="Main navigation">
+				<ul class="menu__list">
+					<li class="menu__item menu__item--drop">
+						<a data-dropdown href="#" class="menu__link menu__link--drop">Shop</a>
+						<ul class="menu__dropdown dropdown-menu">
+							<li class="dropdown-menu__item">
+								<a href="#" class="dropdown-menu__link">Item 1</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a href="#" class="dropdown-menu__link">Item 2</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a href="#" class="dropdown-menu__link">Item 3</a>
+							</li>
+							<li class="dropdown-menu__item">
+								<a href="#" class="dropdown-menu__link">Item 4</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu__item"><a href="#" class="menu__link">On Sale</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">New Arrivals</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Brands</a></li>
+				</ul>
+			</nav>
+		</div>
+		<form action="#" method="GET" class="header__search search-header">
+			<input autocomplete="off" type="text" name="form[]" placeholder="Search for products..."
+				class="search-header__input input input--decor">
+		</form>
+		<div class="header__user-block user-block">
+			<button type="button" class="user-block__item user-block__item--search">
+				<img src="icons/search-secondary.svg" alt="Open search">
+			</button>
+			<a href="#" class="user-block__item">
+				<svg>
+					<use href="icons/sprite.svg#icon-cart"></use>
+				</svg>
+			</a>
+			<a data-da=".menu__body,479.98" href="#" class="user-block__item user-block__item--user">
+				<svg>
+					<use href="icons/sprite.svg#icon-user"></use>
+				</svg>
+			</a>
+		</div>
+
+	</div>
+</header>

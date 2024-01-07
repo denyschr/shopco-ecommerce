@@ -1,0 +1,43 @@
+body {
+	min-width: toRem($minWidth);
+	color: var(--primary);
+	background-color: var(--white);
+	font-family: $fontMain, sans-serif;
+	font-size: $fontSize;
+	&.locked {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: clip;
+}
+
+.page {
+	flex-grow: 1;
+	margin-top: toRem(120);
+}
+
+[class*="_container"] {
+	max-width: toRem($containerWidth);
+	margin: 0 auto;
+	padding: 0 toRem($containerOffset);
+}
+
+.visually-hidden {
+	position: absolute;
+	width: toRem(1);
+	height: toRem(1);
+	margin: toRem(-1);
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}

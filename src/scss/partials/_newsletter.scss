@@ -1,0 +1,61 @@
+.newsletter {
+	position: relative;
+	margin-bottom: toRem(-80);
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(20);
+		padding: toRem(36) toRem(64);
+		border-radius: toRem(20);
+		background-color: var(--primary);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			padding: toRem(28) toRem(40);
+		}
+		@media (max-width: $mobileSmall) {
+			padding: toRem(25) toRem(20);
+		}
+	}
+	&__title {
+		@include adaptiveValue("font-size", 40, 24, 0, $containerWidth, 480);
+		line-height: 1.2;
+		color: var(--white);
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+		@media (min-width: $mobile) {
+			flex-basis: toRem(551);
+			max-width: toRem(551);
+		}
+	}
+	&__form {
+		@media (max-width: $mobile) {
+			width: 100%;
+			max-width: toRem(300);
+		}
+		@media (min-width: $mobile) {
+			flex-basis: toRem(350);
+		}
+	}
+}
+
+.form-newsletter {
+	&__input {
+		background-image: url("../icons/mailbox.svg");
+		&:not(:last-child) {
+			margin-bottom: toRem(14);
+		}
+	}
+	&__button {
+		width: 100%;
+		min-height: toRem(46);
+		background-color: var(--white);
+		transition: background 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--gallery);
+			}
+		}
+	}
+}

@@ -1,0 +1,130 @@
+.menu {
+	&__body {
+		@media (max-width: $tablet) {
+			position: fixed;
+			z-index: 20;
+			left: -100%;
+			top: 0;
+			overflow-y: auto;
+			display: flex;
+			flex-direction: column;
+			min-width: toRem(280);
+			row-gap: toRem(20);
+			height: 100%;
+			padding: toRem(70) toRem(20) toRem(20);
+			background-color: var(--gallery);
+			transition: left 0.5s ease-in-out;
+			._menu-open & {
+				left: 0%;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+			&::before {
+				content: "";
+				position: fixed;
+				z-index: 20;
+				left: -100%;
+				top: 0;
+				width: 100%;
+				height: toRem(70);
+				background-color: var(--white);
+				transition: left 0.5s ease-in-out;
+				._menu-open & {
+					left: 0%;
+				}
+			}
+		}
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: toRem(24);
+		row-gap: toRem(10);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: flex-start;
+			flex-grow: 1;
+			row-gap: 0;
+			margin: 0 toRem(-20);
+		}
+	}
+	&__item {
+		@media (max-width: $tablet) {
+			width: 100%;
+			border-bottom: toRem(1) solid #c2bfbf;
+			&:first-child {
+				border-top: toRem(1) solid #c2bfbf;
+			}
+		}
+		&--drop {
+			position: relative;
+			@media (min-width: $tablet) {
+				margin-bottom: toRem(-8);
+				padding-bottom: toRem(8);
+			}
+		}
+	}
+	&__link {
+		position: relative;
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 110%;
+			width: 0%;
+			height: toRem(1);
+			border-radius: toRem(2);
+			background-color: var(--primary);
+			transition: width 0.3s ease-in-out;
+		}
+		@media (max-width: $tablet) {
+			width: 100%;
+			padding: toRem(15) toRem(20);
+			font-size: toRem(20);
+		}
+		&--drop {
+			display: inline-flex;
+			align-items: center;
+			gap: toRem(4);
+			@media (max-width: $tablet) {
+				justify-content: space-between;
+			}
+			&::after {
+				content: "";
+				width: toRem(16);
+				height: toRem(16);
+				flex: 0 0 toRem(16);
+				margin-top: toRem(1);
+				background: url("../icons/arrow-down.svg") center no-repeat;
+				transition: transform 0.3s ease-in-out;
+			}
+			&._active::after {
+				transform: rotate(180deg);
+			}
+			@media (max-width: $tablet) {
+				&._active + * {
+					display: block;
+				}
+			}
+			@media (min-width: $tablet) {
+				&._active::before {
+					width: 100%;
+				}
+				&._active + * {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.section-offset {
+	@include adaptiveValue("margin-bottom", 80, 50, 0, $containerWidth, 992);
+}
+
+.section-title {
+	font-family: $fontSecondary, sans-serif;
+	font-weight: 700;
+}
+
+.section-title--offset {
+	&:not(:last-child) {
+		margin-bottom: toRem(64);
+	}
+}
+
+.section-title--center {
+	text-align: center;
+}
+
+.section-title--fs-48 {
+	font-size: toRem(48);
+}
+
+.section-title--fs-64 {
+	font-size: toRem(64);
+}
+
+.title {
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.title--fs-20 {
+	font-size: toRem(20);
+}
+
+.title--fs-24 {
+	font-size: toRem(24);
+}
+
+.title--fs-32 {
+	font-size: toRem(32);
+}
+
+.title--fs-36 {
+	font-size: toRem(36);
+}
+
+.logo {
+	font-family: $fontSecondary, sans-serif;
+	@include adaptiveValue("font-size", 32, 26, 0, $containerWidth, 480);
+	font-weight: 700;
+}

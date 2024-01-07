@@ -1,0 +1,50 @@
+.burger {
+	display: none;
+	@media (max-width: $tablet) {
+		position: relative;
+		z-index: 25;
+		display: block;
+		width: toRem(24);
+		height: toRem(18);
+		border-radius: toRem(4);
+		&::before,
+		&::after,
+		span {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			left: 0;
+			border-radius: toRem(2);
+			background-color: var(--primary);
+		}
+	}
+	&::after {
+		top: 0;
+		transition:
+			top 0.3s ease-in-out,
+			transform 0.3s ease-in-out;
+		._menu-open & {
+			transform: rotate(-135deg);
+			top: toRem(8);
+		}
+	}
+	&::before {
+		bottom: 0;
+		transition:
+			bottom 0.3s ease-in-out,
+			transform 0.3s ease-in-out;
+		._menu-open & {
+			transform: rotate(135deg);
+			bottom: toRem(8);
+		}
+	}
+	span {
+		top: 50%;
+		margin-top: toRem(-1);
+		transition: transform 0.3s ease-in-out;
+		._menu-open & {
+			transform: scale(0);
+		}
+	}
+}

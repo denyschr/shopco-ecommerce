@@ -1,0 +1,26 @@
+// Base
+@import "./fonts";
+@import "./reset";
+@import "./mixins";
+@import "./vars";
+@import "./base";
+@import "./forms";
+@import "./common";
+
+// Components
+@import "./components/menu";
+@import "./components/burger";
+@import "./components/social";
+// @import "./components/go-to-top";
+// @import "./components/preloader";
+// @import "./components/popups";
+// @import "./components/breadcrumbs";
+
+// Libs
+// @import "./libs/swiper";
+// @import "./libs/simplebar";
+
+// Partials
+@import "./partials/header";
+@import "./partials/newsletter";
+@import "./partials/footer";

@@ -1,0 +1,40 @@
+.input {
+	display: block;
+	width: 100%;
+	padding: toRem(12) toRem(16);
+	outline: none;
+	border-radius: toRem(62);
+	background-color: var(--gallery);
+	color: var(--primary);
+	cursor: pointer;
+	transition:
+		background 0.3s ease-in-out,
+		box-shadow 0.3s ease-in-out;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #e1e1e1;
+		}
+	}
+	&--decor {
+		padding: toRem(12) toRem(16) toRem(12) toRem(52);
+		background-repeat: no-repeat;
+		background-position: toRem(16);
+	}
+	&::placeholder {
+		color: var(--secondary);
+		transition: opacity 0.3s ease-in-out;
+	}
+	&:focus {
+		background-color: var(--gallery);
+		box-shadow: 0 0 toRem(2) #000;
+		cursor: text;
+		&::placeholder {
+			opacity: 0;
+		}
+	}
+}
+
+textarea.input {
+	resize: none;
+	padding: 0 0;
+}

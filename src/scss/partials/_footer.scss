@@ -1,0 +1,152 @@
+.footer {
+	@include adaptiveValue("padding-top", 140, 120, 0, $containerWidth, 992);
+	@include adaptiveValue("padding-bottom", 88, 30, 0, $containerWidth, 992);
+	background-color: var(--gallery);
+	&__main {
+		display: grid;
+		grid-template-columns: 20% 1fr;
+		@include adaptiveValue("gap", 100, 50, 0, $containerWidth, 992);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 25, 15, 0, $containerWidth, 992);
+			@media (min-width: $mobile) {
+				@include adaptiveValue("padding-bottom", 50, 30, 0, $containerWidth, 992);
+				border-bottom: toRem(1) solid rgba(0, 0, 0, 0.1);
+			}
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			row-gap: toRem(24);
+		}
+	}
+	&__logo {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 25, 15, 0, $containerWidth, 992);
+		}
+	}
+	&__text {
+		color: var(--secondary);
+		font-size: toRem(14);
+		line-height: 1.5;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 35, 20, 0, $containerWidth, 992);
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+	}
+	&__social {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: toRem(30);
+		@media (max-width: em(640)) {
+			flex-direction: column;
+			gap: toRem(16);
+		}
+	}
+	&__copy {
+		color: var(--secondary);
+		font-size: toRem(14);
+	}
+}
+
+.main-footer {
+	&__column {
+		@media (min-width: $mobile) {
+			max-width: toRem(248);
+		}
+	}
+	&__nav {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		@include adaptiveValue("gap", 40, 20, 0, $containerWidth, 768);
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 0;
+		}
+	}
+}
+
+.nav-footer {
+	&__title {
+		font-weight: 500;
+		line-height: 1.12;
+		letter-spacing: toRem(3);
+		text-transform: uppercase;
+		@media (max-width: $mobile) {
+			position: relative;
+			width: 100%;
+			text-align: left;
+			padding: toRem(20) toRem(40) toRem(20) toRem(20);
+			background-color: var(--white);
+			border-bottom: toRem(1) solid rgba(0, 0, 0, 0.1);
+			&::after {
+				content: "";
+				position: absolute;
+				right: toRem(20);
+				top: 50%;
+				transform: translateY(-50%);
+				width: toRem(16);
+				height: toRem(16);
+				background: url("../icons/arrow-down.svg") center no-repeat;
+			}
+		}
+		@media (min-width: $mobile) {
+			pointer-events: none;
+			&:not(:last-child) {
+				margin-bottom: toRem(26);
+			}
+		}
+	}
+	&__body {
+		@media (max-width: $mobile) {
+			padding: toRem(15);
+		}
+	}
+	&__list {
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	&__link {
+		color: var(--secondary);
+		line-height: 1.18;
+		transition: color 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+			}
+		}
+	}
+}
+
+.payment-methods {
+	display: flex;
+	align-items: center;
+	gap: toRem(12);
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-basis: toRem(46);
+		min-height: toRem(30);
+		padding: toRem(4);
+		border-radius: toRem(6);
+		background-color: var(--white);
+		border: toRem(1) solid #d6dce5;
+		filter: drop-shadow(0 toRem(4) toRem(4) rgba(183, 183, 183, 0.08))
+			drop-shadow(0 toRem(4) toRem(8) rgba(183, 183, 183, 0.08));
+	}
+}

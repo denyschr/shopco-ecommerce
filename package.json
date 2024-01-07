@@ -1,0 +1,40 @@
+{
+  "name": "vite-start",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "sprite": "svgo --config ./svgo-cfg.cjs -f ./public/icons/src -o ./public/icons/src && svg-symbol-sprite -i ./public/icons/src -o ./public/icons/sprite.svg -c false"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "@types/splitting": "^1.0.5",
+    "@types/wnumb": "^1.2.3",
+    "@typescript-eslint/eslint-plugin": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "gsap": "^3.12.4",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^8.0.0",
+    "nouislider": "^15.7.1",
+    "sass": "^1.69.5",
+    "sharp": "^0.33.0",
+    "simplebar": "^6.2.5",
+    "splitting": "^1.0.6",
+    "svg-symbol-sprite": "^1.4.1",
+    "svgo": "^3.1.0",
+    "swiper": "^11.0.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vite-plugin-html-inject": "^1.0.4",
+    "wnumb": "^1.2.0"
+  }
+}

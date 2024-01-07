@@ -1,0 +1,49 @@
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-weight: 500;
+	border-radius: toRem(62);
+	&--primary {
+		color: var(--white);
+		background-color: var(--primary);
+	}
+	&--border {
+		background-color: transparent;
+		border: toRem(1) solid rgba(0, 0, 0, 0.1);
+	}
+	&--decor {
+		span {
+			display: inline-flex;
+			align-items: center;
+			gap: toRem(12);
+			&::after {
+				content: "";
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+			}
+		}
+	}
+	&--py-12 {
+		padding-top: toRem(12);
+		padding-bottom: toRem(12);
+	}
+	&--px-16 {
+		padding-left: toRem(16);
+		padding-right: toRem(16);
+	}
+	&--py-16 {
+		padding-top: toRem(16);
+		padding-bottom: toRem(16);
+	}
+	&--px-20 {
+		padding-left: toRem(20);
+		padding-right: toRem(20);
+	}
+	&--px-54 {
+		padding-left: toRem(54);
+		padding-right: toRem(54);
+	}
+}

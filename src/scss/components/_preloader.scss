@@ -1,0 +1,63 @@
+.preloader {
+	position: fixed;
+	z-index: 200;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--white);
+	transition:
+		opacity 0.3s ease-in-out,
+		visibility 0.3s ease-in-out;
+	&._hidden {
+		opacity: 0;
+		visibility: hidden;
+	}
+	&__item {
+		position: relative;
+		width: toRem(12);
+		height: toRem(12);
+		border-radius: 50%;
+		margin: toRem(15) auto;
+		color: var(--purple);
+		animation: animloader 1s linear infinite;
+	}
+}
+
+@keyframes animloader {
+	0% {
+		box-shadow:
+			toRem(14) 0 0 toRem(-2),
+			toRem(38) 0 0 toRem(-2),
+			-14px 0 0 toRem(-2),
+			toRem(-38) 0 0 toRem(-2);
+	}
+	25% {
+		box-shadow:
+			toRem(14) 0 0 toRem(-2),
+			toRem(38) 0 0 toRem(-2),
+			toRem(-14) 0 0 toRem(-2),
+			toRem(-38) 0 0 2px;
+	}
+	50% {
+		box-shadow:
+			toRem(14) 0 0 toRem(-2),
+			toRem(38) 0 0 toRem(-2),
+			toRem(-14) 0 0 2px,
+			toRem(-38) 0 0 toRem(-2);
+	}
+	75% {
+		box-shadow:
+			toRem(14) 0 0 2px,
+			toRem(38) 0 0 toRem(-2),
+			toRem(-14) 0 0 toRem(-2),
+			toRem(-38) 0 0 toRem(-2);
+	}
+	100% {
+		box-shadow:
+			toRem(14) 0 0 toRem(-2),
+			toRem(38) 0 0 2px,
+			toRem(-14) 0 0 toRem(-2),
+			toRem(-38) 0 0 toRem(-2);
+	}
+}

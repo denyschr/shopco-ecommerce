@@ -1,0 +1,52 @@
+.social {
+	display: flex;
+	align-items: center;
+	@include adaptiveValue("gap", 15, 10, 0, $containerWidth, 992);
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: toRem(28);
+		height: toRem(28);
+		flex-basis: toRem(28);
+		border-radius: toRem(28);
+		border: toRem(1) solid rgba(0, 0, 0, 0.2);
+		background-color: var(--white);
+		transition: background 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--primary);
+				svg {
+					fill: var(--white);
+				}
+			}
+		}
+		svg {
+			transition: fill 0.3s ease-in-out;
+		}
+		&--twitter {
+			svg {
+				width: toRem(10);
+				height: toRem(10);
+			}
+		}
+		&--facebook {
+			svg {
+				width: toRem(5);
+				height: toRem(12);
+			}
+		}
+		&--insta {
+			svg {
+				width: toRem(14);
+				height: toRem(14);
+			}
+		}
+		&--github {
+			svg {
+				width: toRem(13);
+				height: toRem(12);
+			}
+		}
+	}
+}

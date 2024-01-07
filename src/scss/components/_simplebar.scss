@@ -1,0 +1,13 @@
+.simplebar-track.simplebar-vertical {
+	width: toRem(10);
+	border-radius: toRem(6);
+	background: #1d1a19;
+}
+
+.simplebar-visible {
+	&::before {
+		opacity: 1;
+		border-radius: toRem(6);
+		background: var(--bgGold);
+	}
+}

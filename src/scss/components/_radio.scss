@@ -1,0 +1,22 @@
+.option {
+	&__input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		&:focus-visible + .option__label {
+			box-shadow: 0 0 toRem(5) var(--brandy);
+		}
+		&:checked + .option__label {
+			color: var(--white);
+			background-color: var(--primary);
+		}
+	}
+	&__label {
+		display: inline-block;
+		padding: toRem(12) toRem(24);
+		color: var(--secondary);
+		border-radius: toRem(62);
+		background-color: var(--gallery);
+	}
+}
