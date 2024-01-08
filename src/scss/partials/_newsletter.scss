@@ -1,5 +1,6 @@
 .newsletter {
 	position: relative;
+	z-index: 2;
 	margin-bottom: toRem(-80);
 	&__inner {
 		display: flex;

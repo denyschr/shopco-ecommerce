@@ -1,0 +1,111 @@
+.hero {
+	background-color: #f2f0f1;
+	&__container {
+		display: flex;
+		@include adaptiveValue("column-gap", 54, 30, 0, $containerWidth, 992);
+	}
+	&__content {
+		padding: toRem(20) 0;
+		@media (min-width: $mobile) {
+			flex-basis: 48.064516%;
+			align-self: center;
+		}
+	}
+	&__title,
+	&__text {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 32, 20, 0, $containerWidth, 768);
+		}
+	}
+	&__button {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 48, 28, 0, $containerWidth, 992);
+		}
+	}
+	&__gains {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		row-gap: toRem(20);
+		@include adaptiveValue("column-gap", 22, 16, 0, $containerWidth, 768);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobileExtraSmall) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	&__gain {
+		@media (max-width: $mobileSmall) {
+			&:nth-child(even) {
+				@include adaptiveValue("padding-left", 22, 10, 0, $containerWidth, 480);
+				border-left: toRem(1) solid rgba(0, 0, 0, 0.1);
+			}
+		}
+		@media (max-width: $mobileExtraSmall) {
+			&:nth-child(even) {
+				padding-left: 0;
+				border-left: none;
+			}
+		}
+		@media (min-width: $mobileSmall) {
+			&:not(:last-child) {
+				@include adaptiveValue("padding-right", 22, 16, 0, $containerWidth, 768);
+				border-right: toRem(1) solid rgba(0, 0, 0, 0.1);
+			}
+		}
+	}
+	&__img-block {
+		position: relative;
+		flex-basis: 48.387097%;
+		aspect-ratio: 600 / 663;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+	}
+	&__decor {
+		position: absolute;
+		&--left {
+			left: 0;
+			top: 45.6621%;
+			max-width: toRem(56);
+		}
+		&--right {
+			right: 0;
+			top: 13.089802%;
+			@include adaptiveValue("max-width", 104, 76, 0, $containerWidth, 992);
+		}
+	}
+}
+
+.gain-hero {
+	display: grid;
+	gap: toRem(5);
+	justify-items: flex-start;
+	@media (max-width: $mobile) {
+		justify-items: center;
+		text-align: center;
+	}
+	&--big {
+		@media (max-width: $mobileSmall) {
+			grid-column: 2 span;
+		}
+		@media (max-width: $mobileExtraSmall) {
+			grid-column: 1 span;
+		}
+	}
+	@media (max-width: $mobileExtraSmall) {
+		justify-items: flex-start;
+		text-align: left;
+	}
+	&__value {
+		@include adaptiveValue("font-size", 40, 28, 0, $containerWidth, 992);
+		font-weight: 700;
+	}
+}

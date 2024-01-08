@@ -22,7 +22,7 @@
 }
 
 .section-title--fs-64 {
-	font-size: toRem(64);
+	@include adaptiveValue("font-size", 64, 38, 0, $containerWidth, 768);
 }
 
 .title {
@@ -44,6 +44,11 @@
 
 .title--fs-36 {
 	font-size: toRem(36);
+}
+
+.text {
+	color: var(--secondary);
+	line-height: 1.37;
 }
 
 .logo {

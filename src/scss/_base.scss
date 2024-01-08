@@ -20,7 +20,7 @@ body {
 
 .page {
 	flex-grow: 1;
-	margin-top: toRem(120);
+	@include adaptiveValue("margin-top", 100, 70, 0, $containerWidth, 768);
 }
 
 [class*="_container"] {

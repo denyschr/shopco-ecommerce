@@ -37,6 +37,13 @@ import "./libs/spoilers";
 // import Popup from './components/popup';
 // const popup = new Popup();
 
+// Animated counter
+import "./components/animated-counter";
+
+// Infinite slider
+import infiniteSlider from "./components/infinite-slider";
+infiniteSlider();
+
 const dropdowns: NodeListOf<HTMLElement> =
   document.querySelectorAll("[data-dropdown]");
 
@@ -47,7 +54,7 @@ if (dropdowns.length) {
       e.preventDefault();
     });
     window.addEventListener("click", (e): void => {
-      if (!(e.target === dropdown)) {
+      if (e.target !== dropdown) {
         dropdown.classList.remove("_active");
       }
     });

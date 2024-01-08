@@ -11,6 +11,7 @@
 @import "./components/menu";
 @import "./components/burger";
 @import "./components/social";
+@import "./components/infinite-slider";
 // @import "./components/go-to-top";
 // @import "./components/preloader";
 // @import "./components/popups";
@@ -22,5 +23,7 @@
 
 // Partials
 @import "./partials/header";
+@import "./partials/hero";
+@import "./partials/brands";
 @import "./partials/newsletter";
 @import "./partials/footer";

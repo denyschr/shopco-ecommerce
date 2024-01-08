@@ -1,0 +1,15 @@
+.brands {
+	@include adaptiveValue("margin-bottom", 72, 50, 0, $containerWidth, 768);
+	background-color: var(--primary);
+	&__container {
+		@include adaptiveValue("padding-top", 44, 28, 0, $containerWidth, 768);
+		@include adaptiveValue("padding-bottom", 44, 28, 0, $containerWidth, 768);
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: toRem(80);
+		flex-wrap: nowrap;
+	}
+}
