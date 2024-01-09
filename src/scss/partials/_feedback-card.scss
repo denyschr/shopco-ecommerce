@@ -1,0 +1,47 @@
+.feedback-card {
+	padding: toRem(28) toRem(32);
+	border-radius: toRem(20);
+	border: toRem(1) solid rgba(0, 0, 0, 0.1);
+	@media (max-width: $tablet) {
+		padding: toRem(24);
+	}
+	&__rating {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 15, 10, 0, $containerWidth, 480);
+		}
+	}
+	&__author {
+		display: inline-flex;
+		align-items: center;
+		gap: toRem(4);
+		&::after {
+			content: "";
+			width: toRem(24);
+			height: toRem(24);
+			flex: 0 0 toRem(24);
+			background: url("../icons/tick-approved.svg") center no-repeat;
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 16, 8, 0, $containerWidth, 480);
+		}
+	}
+	&__text {
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 6;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 24, 16, 0, $containerWidth, 480);
+		}
+		& > * {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+	}
+}
+.rating-feedback {
+	display: flex;
+	align-items: center;
+	gap: toRem(6);
+}

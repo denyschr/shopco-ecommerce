@@ -18,12 +18,18 @@
 // @import "./components/breadcrumbs";
 
 // Libs
-// @import "./libs/swiper";
+@import "./libs/swiper";
 // @import "./libs/simplebar";
 
 // Partials
+@import "./partials/top-banner";
 @import "./partials/header";
 @import "./partials/hero";
 @import "./partials/brands";
+@import "./partials/card-product";
+@import "./partials/products";
+@import "./partials/dress-style";
+@import "./partials/feedback-card";
+@import "./partials/testimonials";
 @import "./partials/newsletter";
 @import "./partials/footer";

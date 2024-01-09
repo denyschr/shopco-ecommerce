@@ -1,5 +1,5 @@
 .header {
-	position: fixed;
+	position: sticky;
 	z-index: 100;
 	left: 0;
 	top: 0;
@@ -7,9 +7,6 @@
 	border-bottom: toRem(1) solid rgba(0, 0, 0, 0.1);
 	background-color: var(--white);
 	transition: top 0.5s ease-in-out;
-	&._active {
-		top: calc(-1 * toRem(150));
-	}
 	&__overlay {
 		position: fixed;
 		z-index: 2;
@@ -33,7 +30,7 @@
 		align-items: center;
 		justify-content: space-between;
 		@include adaptiveValue("gap", 40, 20, 0, $containerWidth, 992);
-		@include adaptiveValue("min-height", 100, 70, 0, $containerWidth, 768);
+		@include adaptiveValue("min-height", 100, 70, 0, $containerWidth, 992);
 		padding-top: toRem(10);
 		padding-bottom: toRem(10);
 	}

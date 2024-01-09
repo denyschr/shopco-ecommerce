@@ -27,7 +27,7 @@
 				left: -100%;
 				top: 0;
 				width: 100%;
-				height: toRem(70);
+				min-height: toRem(70);
 				background-color: var(--white);
 				transition: left 0.5s ease-in-out;
 				._menu-open & {

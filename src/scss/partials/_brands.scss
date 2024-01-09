@@ -1,5 +1,5 @@
 .brands {
-	@include adaptiveValue("margin-bottom", 72, 50, 0, $containerWidth, 768);
+	@include adaptiveValue("margin-bottom", 72, 30, 0, $containerWidth, 768);
 	background-color: var(--primary);
 	&__container {
 		@include adaptiveValue("padding-top", 44, 28, 0, $containerWidth, 768);

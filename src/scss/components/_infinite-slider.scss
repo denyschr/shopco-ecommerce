@@ -23,7 +23,12 @@
 
 .infinite-slider-wrapper {
 	width: max-content;
-	animation: infinite-scroll 10s linear infinite;
+	animation: infinite-scroll 10s linear infinite reverse;
+	@media (any-hover: hover) {
+		&:hover {
+			animation-play-state: paused;
+		}
+	}
 }
 
 .infinite-slider-slide {
@@ -33,7 +38,7 @@
 }
 
 @keyframes infinite-scroll {
-	to {
+	0% {
 		transform: translate(calc(-50% - toRem(40)));
 	}
 }

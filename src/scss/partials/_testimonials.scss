@@ -1,0 +1,76 @@
+.testimonials {
+	&__container {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 24, 0, $containerWidth, 480);
+		}
+	}
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		gap: toRem(20);
+		@media (max-width: $mobileExtraSmall) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	&__body {
+		@media (max-width: $tablet) {
+			padding: 0 toRem(15);
+		}
+	}
+	&__slider {
+		@media (min-width: $tablet) {
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				width: 6.4%;
+				height: 100%;
+				pointer-events: none;
+				background-color: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(toRem(2));
+			}
+			&::before {
+				left: 0;
+			}
+			&::after {
+				right: 0;
+			}
+		}
+	}
+	&__slide {
+		min-height: 100%;
+		height: unset;
+	}
+	&__feedback {
+		height: 100%;
+	}
+}
+
+.nav-testimonials {
+	display: flex;
+	align-items: center;
+	gap: toRem(16);
+	&__button {
+		@media (any-hover: hover) {
+			&:hover {
+				svg {
+					fill: var(--secondary);
+				}
+			}
+		}
+		svg {
+			width: toRem(24);
+			height: toRem(24);
+			fill: var(--primary);
+			transition: fill 0.3s ease-in-out;
+		}
+	}
+	&__button--prev {
+		transform: rotate(180deg);
+		margin-top: toRem(-4);
+	}
+}

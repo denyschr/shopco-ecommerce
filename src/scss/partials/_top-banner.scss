@@ -1,0 +1,50 @@
+.top-banner {
+	background-color: var(--primary);
+	&._hidden {
+		display: none;
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: toRem(38);
+		gap: toRem(10);
+		padding-top: toRem(9);
+		padding-bottom: toRem(9);
+	}
+	&__text {
+		flex-grow: 1;
+		text-align: center;
+		color: var(--white);
+		@include adaptiveValue("font-size", 14, 12, 0, $containerWidth, 480);
+	}
+	&__link {
+		position: relative;
+		font-weight: 500;
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					width: 0;
+				}
+			}
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 110%;
+			left: 0;
+			width: 100%;
+			height: toRem(1);
+			background-color: var(--white);
+			transition: width 0.3s ease-in-out;
+		}
+	}
+	&__close {
+		flex: 0 0 toRem(20);
+		width: toRem(20);
+		height: toRem(20);
+		@media (max-width: $mobileSmall) {
+			display: none;
+		}
+	}
+}

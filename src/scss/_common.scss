@@ -9,7 +9,7 @@
 
 .section-title--offset {
 	&:not(:last-child) {
-		margin-bottom: toRem(64);
+		@include adaptiveValue("margin-bottom", 55, 30, 0, $containerWidth, 992);
 	}
 }
 
@@ -18,7 +18,7 @@
 }
 
 .section-title--fs-48 {
-	font-size: toRem(48);
+	@include adaptiveValue("font-size", 48, 32, 0, $containerWidth, 480);
 }
 
 .section-title--fs-64 {
@@ -31,7 +31,7 @@
 }
 
 .title--fs-20 {
-	font-size: toRem(20);
+	@include adaptiveValue("font-size", 20, 16, 0, $containerWidth, 480);
 }
 
 .title--fs-24 {
@@ -43,7 +43,7 @@
 }
 
 .title--fs-36 {
-	font-size: toRem(36);
+	@include adaptiveValue("font-size", 36, 28, 0, $containerWidth, 768);
 }
 
 .text {

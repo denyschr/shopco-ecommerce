@@ -19,6 +19,17 @@
 	&--border {
 		background-color: transparent;
 		border: toRem(1) solid rgba(0, 0, 0, 0.1);
+		transition:
+			border 0.3s ease-in-out,
+			background 0.3s ease-in-out,
+			color 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--white);
+				border-color: transparent;
+				background-color: var(--primary);
+			}
+		}
 	}
 	&--decor {
 		span {
@@ -52,5 +63,38 @@
 	&--px-54 {
 		padding-left: toRem(54);
 		padding-right: toRem(54);
+	}
+}
+
+.button-close {
+	position: relative;
+	@media (any-hover: hover) {
+		&:hover {
+			&::before,
+			&::after {
+				background-color: #c9c9c9;
+			}
+		}
+	}
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: toRem(2);
+		border-radius: toRem(4);
+		background-color: var(--white);
+		transition: background 0.3s ease-in-out;
+	}
+	&::before {
+		content: "";
+		top: toRem(10);
+		transform: rotate(45deg);
+	}
+	&::after {
+		content: "";
+		bottom: toRem(8);
+		transform: rotate(-45deg);
 	}
 }

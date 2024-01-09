@@ -1,0 +1,18 @@
+.products {
+	margin-bottom: toRem(64);
+	&__slider {
+		&:not(:last-child) {
+			margin-bottom: toRem(36);
+		}
+	}
+	&__wrapper {
+		@media (min-width: $tablet) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: toRem(20);
+		}
+	}
+	&__wrapper-button {
+		text-align: center;
+	}
+}

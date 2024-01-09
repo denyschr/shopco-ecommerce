@@ -1,0 +1,84 @@
+.card-product {
+	&__img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		aspect-ratio: 295 / 298;
+		border-radius: toRem(20);
+		background-color: #f0eeed;
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			transform: scale(1.00001);
+			transition: transform 0.3s ease-in-out;
+		}
+	}
+	&__info {
+		display: grid;
+		justify-items: flex-start;
+		gap: toRem(8);
+	}
+	&__name {
+		transition: color 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--secondary);
+			}
+		}
+	}
+}
+
+.rating-card-product {
+	display: flex;
+	align-items: center;
+	gap: toRem(13);
+	&__items {
+		display: flex;
+		align-items: center;
+		gap: toRem(5);
+	}
+	&__value {
+		font-size: toRem(14);
+		span {
+			color: var(--secondary);
+		}
+	}
+}
+
+.price-product-card {
+	display: flex;
+	align-items: center;
+	gap: toRem(10);
+	&__current,
+	&__old {
+		@include adaptiveValue("font-size", 24, 20, 0, $containerWidth, 992);
+		font-weight: 700;
+	}
+	&__old {
+		color: rgba(0, 0, 0, 0.4);
+		text-decoration-line: strikethrough;
+	}
+	&__discount {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: toRem(6) toRem(14);
+		border-radius: toRem(10);
+		background-color: rgba(255, 51, 51, 0.1);
+		color: #f33;
+		font-size: toRem(12);
+		font-weight: 500;
+	}
+}

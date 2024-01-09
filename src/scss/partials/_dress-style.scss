@@ -1,0 +1,72 @@
+.dress-style {
+	&__inner {
+		padding: toRem(70) toRem(64) toRem(76);
+		border-radius: toRem(40);
+		background-color: var(--gallery);
+		@media (max-width: $tablet) {
+			padding: toRem(50) toRem(40);
+		}
+		@media (max-width: $mobile) {
+			padding: toRem(30);
+		}
+		@media (max-width: $mobileSmall) {
+			padding: toRem(30) toRem(24);
+		}
+	}
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: toRem(20);
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	&__item {
+		@media (min-width: $mobile) {
+			&--small {
+				grid-column: 2 span;
+			}
+			&--big {
+				grid-column: 4 span;
+			}
+		}
+	}
+}
+
+.card-dress-style {
+	height: 100%;
+	&__link {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		@include adaptiveValue("min-height", 290, 180, 0, $containerWidth, 768);
+		overflow: hidden;
+		padding: toRem(25) toRem(36);
+		border-radius: toRem(20);
+		background-color: var(--white);
+		transition: opacity 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		@media (max-width: $mobile) {
+			padding: toRem(18) toRem(24);
+		}
+	}
+	&__title {
+		position: relative;
+		z-index: 2;
+	}
+	&__img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		object-position: top;
+	}
+}

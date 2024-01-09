@@ -18,7 +18,7 @@ import "./libs/dynamic-adaptive";
 // import './components/simplebar';
 
 // Slider
-// import './components/sliders';
+import "./components/sliders";
 
 // Range
 // import './libs/range';
@@ -36,6 +36,9 @@ import "./libs/spoilers";
 // Popup
 // import Popup from './components/popup';
 // const popup = new Popup();
+
+// Animations
+import "./components/animations";
 
 // Animated counter
 import "./components/animated-counter";

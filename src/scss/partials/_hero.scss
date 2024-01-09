@@ -21,6 +21,9 @@
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 48, 28, 0, $containerWidth, 992);
 		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
 	}
 	&__gains {
 		display: grid;
@@ -71,6 +74,7 @@
 	}
 	&__decor {
 		position: absolute;
+		pointer-events: none;
 		&--left {
 			left: 0;
 			top: 45.6621%;
@@ -99,10 +103,6 @@
 		@media (max-width: $mobileExtraSmall) {
 			grid-column: 1 span;
 		}
-	}
-	@media (max-width: $mobileExtraSmall) {
-		justify-items: flex-start;
-		text-align: left;
 	}
 	&__value {
 		@include adaptiveValue("font-size", 40, 28, 0, $containerWidth, 992);

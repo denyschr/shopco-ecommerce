@@ -87,6 +87,11 @@
 			padding: toRem(20) toRem(40) toRem(20) toRem(20);
 			background-color: var(--white);
 			border-bottom: toRem(1) solid rgba(0, 0, 0, 0.1);
+			&._active {
+				&::after {
+					transform: translateY(-50%) rotate(180deg);
+				}
+			}
 			&::after {
 				content: "";
 				position: absolute;
@@ -96,6 +101,7 @@
 				width: toRem(16);
 				height: toRem(16);
 				background: url("../icons/arrow-down.svg") center no-repeat;
+				transition: transform 0.3s ease-in-out;
 			}
 		}
 		@media (min-width: $mobile) {
