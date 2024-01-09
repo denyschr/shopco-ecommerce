@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopco</title>
-  <script type="module" crossorigin src="/shopco-ecommerce/assets/main-JKoWnH7G.js"></script>
-  <link rel="stylesheet" crossorigin href="/shopco-ecommerce/assets/main-E2QZ9-k0.css">
+  <script type="module" crossorigin src="/shopco-ecommerce/assets/main-rzJ16MBf.js"></script>
+  <link rel="stylesheet" crossorigin href="/shopco-ecommerce/assets/main-PSYSVhsz.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         <button type="button" class="top-banner__close button-close"></button>
       </div>
     </div>
-    <header class="header">
+    <header data-timeout="500" class="header">
 	<div class="header__overlay"></div>
 	<div class="header__container">
 		<div class="header__left">
@@ -54,11 +54,14 @@
 			</nav>
 		</div>
 		<form action="#" method="GET" class="header__search search-header">
-			<input autocomplete="off" type="text" name="form[]" placeholder="Search for products..."
+			<div class="search-header__wrapper">
+				<input autocomplete="off" type="text" name="form[]" placeholder="Search for products..."
 				class="search-header__input input input--decor">
+				<button type="button" class="search-header__button">Cancel</button>
+			</div>
 		</form>
 		<div class="header__user-block user-block">
-			<button type="button" class="user-block__item user-block__item--search">
+			<button id="search-icon" type="button" class="user-block__item user-block__item--search">
 				<img src="icons/search-secondary.svg" alt="Open search">
 			</button>
 			<a href="#" class="user-block__item">
