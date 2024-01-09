@@ -5,12 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopco</title>
-  <script type="module" crossorigin src="/shopco-ecommerce/assets/main-rAqWoE5p.js"></script>
-  <link rel="stylesheet" crossorigin href="/shopco-ecommerce/assets/main-aJKcYmY7.css">
+  <script type="module" crossorigin src="/shopco-ecommerce/assets/main-JKoWnH7G.js"></script>
+  <link rel="stylesheet" crossorigin href="/shopco-ecommerce/assets/main-E2QZ9-k0.css">
 </head>
 
 <body>
   <div class="wrapper">
+    <div class="top-banner">
+      <div class="top-banner__container">
+        <div class="top-banner__text">
+          Sign up and get 20% off to your first order.
+          <a class="top-banner__link" href="#">Sign Up Now</a>
+        </div>
+        <button type="button" class="top-banner__close button-close"></button>
+      </div>
+    </div>
     <header class="header">
 	<div class="header__overlay"></div>
 	<div class="header__container">
@@ -25,16 +34,16 @@
 						<a data-dropdown href="#" class="menu__link menu__link--drop">Shop</a>
 						<ul class="menu__dropdown dropdown-menu">
 							<li class="dropdown-menu__item">
-								<a href="#" class="dropdown-menu__link">Item 1</a>
+								<a href="#" class="dropdown-menu__link">Casual</a>
 							</li>
 							<li class="dropdown-menu__item">
-								<a href="#" class="dropdown-menu__link">Item 2</a>
+								<a href="#" class="dropdown-menu__link">Formal</a>
 							</li>
 							<li class="dropdown-menu__item">
-								<a href="#" class="dropdown-menu__link">Item 3</a>
+								<a href="#" class="dropdown-menu__link">Party</a>
 							</li>
 							<li class="dropdown-menu__item">
-								<a href="#" class="dropdown-menu__link">Item 4</a>
+								<a href="#" class="dropdown-menu__link">Gym</a>
 							</li>
 						</ul>
 					</li>
@@ -71,7 +80,7 @@
       <section class="page__hero hero">
 	<div class="hero__container">
 		<div class="hero__content">
-			<h1 class="hero__title section-title section-title--fs-64">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+			<h1 data-anim-title data-splitting class="hero__title section-title section-title--fs-64">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
 			<div class="hero__text text">
 				<p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
 			</div>
@@ -120,6 +129,442 @@
 					<img src="icons/calvin-klein.svg" alt="Calvin Klein">
 				</li>
 			</ul>
+		</div>
+	</div>
+</section>
+      <section class="page__arrival products">
+	<div class="products__container">
+		<h2 data-anim-title data-splitting class="products__title section-title section-title--fs-48 section-title--center section-title--offset">
+			NEW ARRIVALS
+		</h2>
+		<div class="products__slider products__slider--arrival swiper">
+			<div class="products__wrapper swiper-wrapper">
+				<div class="products__slide swiper-slide">
+					<article class="products__item card-product">
+						<a href="#" class="card-product__img">
+							<img src="img/t-shirt-with-tape-details.webp" srcset="img/t-shirt-with-tape-details.webp 1x, img/t-shirt-with-tape-details_2x.webp 2x" alt="T-shirt with tape details">
+						</a>
+						<div class="card-product__info">
+							<h3 class="card-product__name title title--fs-20">
+								<a href="#">T-shirt with Tape details</a>
+							</h3>
+							<div class="card-product__rating rating-card-product">
+								<div class="rating-card-product__items">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt="Rating 4.5 out of 5">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-half.svg" alt>
+								</div>
+								<div class="rating-card-product__value">4.5/<span>5</span></div>
+							</div>
+							<div class="card-product__price price-product-card">
+								<div class="price-product-card__current">$120</div>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="products__slide swiper-slide">
+					<article class="products__item card-product">
+						<a href="#" class="card-product__img">
+							<img src="img/skinny-fit-jeans.webp" srcset="img/skinny-fit-jeans.webp 1x, img/skinny-fit-jeans_2x.webp 2x" alt="Skinny Fit Jeans">
+						</a>
+						<div class="card-product__info">
+							<h3 class="card-product__name title title--fs-20">
+								<a href="#">Skinny Fit Jeans</a>
+							</h3>
+							<div class="card-product__rating rating-card-product">
+								<div class="rating-card-product__items">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt="Rating 3.5 out of 5">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-half.svg" alt>
+								</div>
+								<div class="rating-card-product__value">3.5/<span>5</span></div>
+							</div>
+							<div class="card-product__price price-product-card">
+								<div class="price-product-card__current">$240</div>
+								<div class="price-product-card__old">$260</div>
+								<div class="price-product-card__discount">-20%</div>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="products__slide swiper-slide">
+					<article class="products__item card-product">
+						<a href="#" class="card-product__img">
+							<img src="img/checkered-shirt.webp" srcset="img/checkered-shirt.webp 1x, img/checkered-shirt_2x.webp 2x" alt="Checkered Shirt">
+						</a>
+						<div class="card-product__info">
+							<h3 class="card-product__name title title--fs-20">
+								<a href="#">Checkered Shirt</a>
+							</h3>
+							<div class="card-product__rating rating-card-product">
+								<div class="rating-card-product__items">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt="Rating 4.5 out of 5">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-half.svg" alt>
+								</div>
+								<div class="rating-card-product__value">4.5/<span>5</span></div>
+							</div>
+							<div class="card-product__price price-product-card">
+								<div class="price-product-card__current">$180</div>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="products__slide swiper-slide">
+					<article class="products__item card-product">
+						<a href="#" class="card-product__img">
+							<img src="img/sleeve-striped-t-shirt.webp" srcset="img/sleeve-striped-t-shirt.webp 1x, img/sleeve-striped-t-shirt_2x.webp 2x" alt="Sleeve Striped T-shirt">
+						</a>
+						<div class="card-product__info">
+							<h3 class="card-product__name title title--fs-20">
+								<a href="#">Sleeve Striped T-shirt</a>
+							</h3>
+							<div class="card-product__rating rating-card-product">
+								<div class="rating-card-product__items">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt="Rating 4.5 out of 5">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-half.svg" alt>
+								</div>
+								<div class="rating-card-product__value">4.5/<span>5</span></div>
+							</div>
+							<div class="card-product__price price-product-card">
+								<div class="price-product-card__current">$130</div>
+								<div class="price-product-card__old">$160</div>
+								<div class="price-product-card__discount">-30%</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+		<div class="products__wrapper-button">
+			<a href="#" class="products__button button button--border button--py-16 button--px-54">
+				View All
+			</a>
+		</div>
+	</div>
+</section>
+      <section class="page__top-selling products">
+	<div class="products__container">
+		<h2 data-anim-title data-splitting class="products__title section-title section-title--fs-48 section-title--center section-title--offset">
+			top selling
+		</h2>
+		<div class="products__slider products__slider--selling swiper">
+			<div class="products__wrapper swiper-wrapper">
+				<div class="products__slide swiper-slide">
+					<article class="products__item card-product">
+						<a href="#" class="card-product__img">
+							<img src="img/vertical-striped-shirt.webp" srcset="img/vertical-striped-shirt.webp 1x, img/vertical-striped-shirt_2x.webp 2x" alt="Vertical Striped Shirt">
+						</a>
+						<div class="card-product__info">
+							<h3 class="card-product__name title title--fs-20">
+								<a href="#">Vertical Striped Shirt</a>
+							</h3>
+							<div class="card-product__rating rating-card-product">
+								<div class="rating-card-product__items">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt="Rating 5 out of 5">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+								</div>
+								<div class="rating-card-product__value">5.0/<span>5</span></div>
+							</div>
+							<div class="card-product__price price-product-card">
+								<div class="price-product-card__current">$212</div>
+								<div class="price-product-card__old">$232</div>
+								<div class="price-product-card__discount">-20%</div>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="products__slide swiper-slide">
+					<article class="products__item card-product">
+						<a href="#" class="card-product__img">
+							<img src="img/courage-graphic-t-shirt.webp" srcset="img/courage-graphic-t-shirt.webp 1x, img/courage-graphic-t-shirt_2x.webp 2x" alt="Courage Graphic T-shirt">
+						</a>
+						<div class="card-product__info">
+							<h3 class="card-product__name title title--fs-20">
+								<a href="#">Courage Graphic T-shirt</a>
+							</h3>
+							<div class="card-product__rating rating-card-product">
+								<div class="rating-card-product__items">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt="Rating 4 out of 5">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+								</div>
+								<div class="rating-card-product__value">4.0/<span>5</span></div>
+							</div>
+							<div class="card-product__price price-product-card">
+								<div class="price-product-card__current">$145</div>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="products__slide swiper-slide">
+					<article class="products__item card-product">
+						<a href="#" class="card-product__img">
+							<img src="img/loose-fit-bermuda-shorts.webp" srcset="img/loose-fit-bermuda-shorts.webp 1x, img/loose-fit-bermuda-shorts_2x.webp 2x" alt="Loose Fit Bermuda Shorts">
+						</a>
+						<div class="card-product__info">
+							<h3 class="card-product__name title title--fs-20">
+								<a href="#">Loose Fit Bermuda Shorts</a>
+							</h3>
+							<div class="card-product__rating rating-card-product">
+								<div class="rating-card-product__items">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt="Rating 3 out of 5">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+								</div>
+								<div class="rating-card-product__value">3.0/<span>5</span></div>
+							</div>
+							<div class="card-product__price price-product-card">
+								<div class="price-product-card__current">$80</div>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="products__slide swiper-slide">
+					<article class="products__item card-product">
+						<a href="#" class="card-product__img">
+							<img src="img/faded-skinny-jeans.webp" srcset="img/faded-skinny-jeans.webp 1x, img/faded-skinny-jeans_2x.webp 2x" alt="Faded Skinny Jeans">
+						</a>
+						<div class="card-product__info">
+							<h3 class="card-product__name title title--fs-20">
+								<a href="#">Faded Skinny Jeans</a>
+							</h3>
+							<div class="card-product__rating rating-card-product">
+								<div class="rating-card-product__items">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt="Rating 4.5 out of 5">
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-full.svg" alt>
+									<img class="rating-card-product__item" src="icons/star-half.svg" alt>
+								</div>
+								<div class="rating-card-product__value">4.5/<span>5</span></div>
+							</div>
+							<div class="card-product__price price-product-card">
+								<div class="price-product-card__current">$210</div>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+		<div class="products__wrapper-button">
+			<a href="#" class="products__button button button--border button--py-16 button--px-54">
+				View All
+			</a>
+		</div>
+	</div>
+</section>
+      <section class="page__dress-style dress-style section-offset">
+	<div class="dress-style__container">
+		 <div class="dress-style__inner">
+				<h2 data-anim-title data-splitting class="dress-style__title section-title section-title--fs-48 section-title--offset section-title--center">BROWSE BY dress STYLE</h2>
+				<div class="dress-style__items">
+					<div class="dress-style__item dress-style__item--small">
+						<article class="dress-style__card card-dress-style">
+							<a href="#" class="card-dress-style__link">
+								<h3 class="card-dress-style__title title title--fs-36">Casual</h3>
+								<img class="card-dress-style__img" src="img/dress-style-casual.webp" aria-hidden="true" alt>
+							</a>
+						</article>
+					</div>
+					<div class="dress-style__item dress-style__item--big">
+						<article class="dress-style__card card-dress-style">
+							<a href="#" class="card-dress-style__link">
+								<h3 class="card-dress-style__title title title--fs-36">Formal</h3>
+								<img class="card-dress-style__img" src="img/dress-style-formal.webp" aria-hidden="true" alt>
+							</a>
+						</article>
+					</div>
+					<div class="dress-style__item dress-style__item--big">
+						<article class="dress-style__card card-dress-style">
+							<a href="#" class="card-dress-style__link">
+								<h3 class="card-dress-style__title title title--fs-36">Party</h3>
+								<img class="card-dress-style__img" src="img/dress-style-party.webp" aria-hidden="true" alt>
+							</a>
+						</article>
+					</div>
+					<div class="dress-style__item dress-style__item--small">
+						<article class="dress-style__card card-dress-style">
+							<a href="#" class="card-dress-style__link">
+								<h3 class="card-dress-style__title title title--fs-36">Gym</h3>
+								<img class="card-dress-style__img" src="img/dress-style-gym.webp" aria-hidden="true" alt>
+							</a>
+						</article>
+					</div>
+				</div>
+		 </div>
+	</div>
+</section>
+      <section class="page__testimonials testimonials section-offset">
+	<div class="testimonials__container">
+		<div class="testimonials__top">
+			<h2 data-anim-title data-splitting class="testimonials__title section-title section-title--fs-48">OUR HAPPY CUSTOMERS</h2>
+			<div class="testimonials__nav nav-testimonials">
+				<button type="button" class="nav-testimonials__button nav-testimonials__button--prev" aria-label="Scroll back">
+					<svg>
+						<use href="icons/sprite.svg#icon-arrow-slider"></use>
+					</svg>
+				</button>
+				<button type="button" class="nav-testimonials__button nav-testimonials__button--next" aria-label="Scroll next">
+					<svg>
+						<use href="icons/sprite.svg#icon-arrow-slider"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="testimonials__body">
+		<div class="testimonials__slider swiper">
+			<div class="testimonials__wrapper swiper-wrapper">
+				<div class="testimonials__slide swiper-slide">
+					<div class="testimonials__feedback feedback-card">
+						<div class="feedback-card__rating rating-feedback">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt="Rating 5 out of 5">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+						</div>
+						<h3 class="feedback-card__author title title--fs-20">James L.</h3>
+						<div class="feedback-card__text text">
+							<blockquote>
+								"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="testimonials__slide swiper-slide">
+					<div class="testimonials__feedback feedback-card">
+						<div class="feedback-card__rating rating-feedback">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt="Rating 5 out of 5">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+						</div>
+						<h3 class="feedback-card__author title title--fs-20">Sarah M.</h3>
+						<div class="feedback-card__text text">
+							<blockquote>
+								"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="testimonials__slide swiper-slide">
+					<div class="testimonials__feedback feedback-card">
+						<div class="feedback-card__rating rating-feedback">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt="Rating 5 out of 5">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+						</div>
+						<h3 class="feedback-card__author title title--fs-20">Alex K.</h3>
+						<div class="feedback-card__text text">
+							<blockquote>
+								"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="testimonials__slide swiper-slide">
+					<div class="testimonials__feedback feedback-card">
+						<div class="feedback-card__rating rating-feedback">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt="Rating 5 out of 5">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+						</div>
+						<h3 class="feedback-card__author title title--fs-20">James L.</h3>
+						<div class="feedback-card__text text">
+							<blockquote>
+								"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="testimonials__slide swiper-slide">
+					<div class="testimonials__feedback feedback-card">
+						<div class="feedback-card__rating rating-feedback">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt="Rating 5 out of 5">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+						</div>
+						<h3 class="feedback-card__author title title--fs-20">Sarah M.</h3>
+						<div class="feedback-card__text text">
+							<blockquote>
+								"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="testimonials__slide swiper-slide">
+					<div class="testimonials__feedback feedback-card">
+						<div class="feedback-card__rating rating-feedback">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt="Rating 5 out of 5">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+						</div>
+						<h3 class="feedback-card__author title title--fs-20">Sarah M.</h3>
+						<div class="feedback-card__text text">
+							<blockquote>
+								"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="testimonials__slide swiper-slide">
+					<div class="testimonials__feedback feedback-card">
+						<div class="feedback-card__rating rating-feedback">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt="Rating 5 out of 5">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+						</div>
+						<h3 class="feedback-card__author title title--fs-20">Sarah M.</h3>
+						<div class="feedback-card__text text">
+							<blockquote>
+								"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="testimonials__slide swiper-slide">
+					<div class="testimonials__feedback feedback-card">
+						<div class="feedback-card__rating rating-feedback">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt="Rating 5 out of 5">
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+							<img class="rating-feedback__item" src="icons/star-full.svg" alt>
+						</div>
+						<h3 class="feedback-card__author title title--fs-20">Sarah M.</h3>
+						<div class="feedback-card__text text">
+							<blockquote>
+								"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+							</blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
