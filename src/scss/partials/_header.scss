@@ -17,6 +17,7 @@
 		width: 100%;
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(toRem(2));
 		transition:
 			opacity 0.3s ease-in-out,
 			visibility 0.3s ease-in-out;
@@ -42,7 +43,7 @@
 	&__logo {
 		position: relative;
 		z-index: 21;
-		padding-bottom: toRem(8);
+		// padding-bottom: toRem(8);
 	}
 	&__menu {
 		@media (max-width: $tablet) {
@@ -54,7 +55,27 @@
 	&__search {
 		flex-grow: 1;
 		@media (max-width: $mobileSmall) {
-			display: none;
+			position: fixed;
+			z-index: 40;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			visibility: hidden;
+			overflow-y: auto;
+			padding: toRem(40) toRem(20);
+			background-color: var(--white);
+			transition:
+				opacity 0.3s ease-in-out,
+				visibility 0.3s ease-in-out;
+		}
+		&._active {
+			opacity: 1;
+			visibility: visible;
+		}
+		@media (max-width: $mobileExtraSmall) {
+			padding: toRem(20);
 		}
 	}
 }
@@ -96,8 +117,21 @@
 }
 
 .search-header {
+	&__wrapper {
+		@media (max-width: $mobileSmall) {
+			display: flex;
+			align-items: center;
+			gap: toRem(15);
+		}
+	}
 	&__input {
 		background-image: url("../icons/search-primary.svg");
+	}
+	&__button {
+		font-weight: 700;
+		@media (min-width: $mobileSmall) {
+			display: none;
+		}
 	}
 }
 

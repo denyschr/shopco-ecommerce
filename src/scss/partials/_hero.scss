@@ -29,7 +29,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		row-gap: toRem(20);
-		@include adaptiveValue("column-gap", 22, 16, 0, $containerWidth, 768);
+		@include adaptiveValue("column-gap", 22, 12, 0, $containerWidth, 768);
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
 		}

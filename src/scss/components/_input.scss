@@ -5,6 +5,7 @@
 	outline: none;
 	border-radius: toRem(62);
 	background-color: var(--gallery);
+	font-weight: 500;
 	color: var(--primary);
 	cursor: pointer;
 	transition:
@@ -21,6 +22,7 @@
 		background-position: toRem(16);
 	}
 	&::placeholder {
+		font-weight: 400;
 		color: var(--secondary);
 		transition: opacity 0.3s ease-in-out;
 	}

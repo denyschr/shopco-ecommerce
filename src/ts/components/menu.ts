@@ -1,4 +1,5 @@
 function menuInit() {
+  const header = document.querySelector(".header") as HTMLElement;
   const overlay = document.querySelector(".header__overlay") as HTMLDivElement;
   const burger = document.querySelector(".burger") as HTMLButtonElement;
   const topBanner = document.querySelector(".top-banner") as HTMLDivElement;
@@ -6,10 +7,12 @@ function menuInit() {
     ".top-banner__close",
   ) as HTMLButtonElement;
 
+  const timeout: number = Number(header.dataset.timeout);
+
   function topBannerHandle(): void {
     setTimeout((): void => {
       topBanner.classList.remove("_hidden");
-    }, 500);
+    }, timeout);
   }
 
   if (topBannerClose) {

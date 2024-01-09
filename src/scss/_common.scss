@@ -55,4 +55,5 @@
 	font-family: $fontSecondary, sans-serif;
 	@include adaptiveValue("font-size", 32, 26, 0, $containerWidth, 480);
 	font-weight: 700;
+	line-height: 1.2;
 }

@@ -8,11 +8,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Splitting text (should set data-splitting for an element)
 gsap.utils.toArray("[data-anim-title]").forEach((title): void => {
-  const chars = (title as HTMLElement).querySelectorAll(".char");
+  const chars = (title as HTMLHeadingElement).querySelectorAll(".char");
   gsap
     .timeline({
       scrollTrigger: {
-        trigger: title as HTMLElement,
+        trigger: title as HTMLHeadingElement,
         start: "top 70%",
       },
     })

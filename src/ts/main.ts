@@ -63,3 +63,25 @@ if (dropdowns.length) {
     });
   });
 }
+
+const headerSearchIcon = document.getElementById(
+  "search-icon",
+) as HTMLButtonElement;
+
+const headerSearchForm = document.querySelector(
+  ".search-header",
+) as HTMLFormElement;
+
+const headerSearchClose = headerSearchForm.querySelector(
+  ".search-header__button",
+) as HTMLButtonElement;
+
+headerSearchIcon.addEventListener("click", (): void => {
+  document.body.classList.add("locked");
+  headerSearchForm.classList.add("_active");
+});
+
+headerSearchClose.addEventListener("click", (): void => {
+  document.body.classList.remove("locked");
+  headerSearchForm.classList.remove("_active");
+});
