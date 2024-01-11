@@ -23,6 +23,10 @@ import "./components/sliders";
 // Range
 // import './libs/range';
 
+// Quantity
+import Quantity from "./components/quantity";
+const quantity = new Quantity();
+
 // Tabs
 // import GrapthTabs from './components/tabs';
 // const tabs = new GrapthTabs();

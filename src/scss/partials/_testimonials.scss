@@ -70,7 +70,8 @@
 		}
 	}
 	&__button--prev {
-		transform: rotate(180deg);
-		margin-top: toRem(-4);
+		svg {
+			transform: rotate(180deg);
+		}
 	}
 }

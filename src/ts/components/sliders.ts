@@ -3,7 +3,7 @@ import { Pagination, Navigation, Autoplay, Thumbs } from "swiper/modules";
 
 if (document.querySelector(".testimonials__slider")) {
   const slider: Swiper = new Swiper(".testimonials__slider", {
-    modules: [Pagination, Navigation, Autoplay],
+    modules: [Navigation, Autoplay],
     loop: true,
     freeMode: true,
     spaceBetween: 15,
@@ -45,15 +45,36 @@ if (
     modules: [Thumbs],
     spaceBetween: 14,
     slidesPerView: 3,
+    grabCursor: true,
     freeMode: true,
-    direction: "vertical",
     watchSlidesProgress: true,
+    breakpoints: {
+      992: {
+        direction: "vertical",
+      },
+      768: {
+        direction: "horizontal",
+        slidesPerView: 6,
+      },
+      480: {
+        slidesPerView: 4,
+      },
+    },
   });
   const sliderProduct: Swiper = new Swiper(".slider-product", {
-    modules: [Thumbs],
+    modules: [Pagination, Navigation, Thumbs],
     loop: true,
     spaceBetween: 14,
+    grabCursor: true,
     speed: 800,
+    pagination: {
+      el: ".slider-product__pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".nav-product-slider__button--next",
+      prevEl: ".nav-product-slider__button--prev",
+    },
     thumbs: {
       swiper: thumbsSlider,
     },

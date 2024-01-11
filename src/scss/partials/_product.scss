@@ -1,34 +1,57 @@
 .product {
 	&:not(:last-child) {
-		margin-bottom: toRem(64);
-		padding-top: toRem(27);
+		@include adaptiveValue("margin-bottom", 64, 50, 0, $containerWidth, 480);
+		@include adaptiveValue("padding-top", 27, 18, 0, $containerWidth, 480);
 	}
 	&__breadcrumbs {
 		&:not(:last-child) {
-			margin-bottom: toRem(36);
+			@include adaptiveValue("margin-bottom", 36, 22, 0, $containerWidth, 480);
 		}
 	}
 }
 
 .about-product {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	align-items: flex-start;
-	gap: toRem(40);
-	&__left {
-		position: sticky;
-		left: 0;
-		top: toRem(100);
-		overflow: hidden;
-		display: flex;
+	@media (min-width: $tablet) {
+		display: grid;
 		align-items: flex-start;
-		gap: toRem(14);
+		gap: toRem(40);
+		grid-template-columns: repeat(2, 1fr);
+	}
+	&__left {
+		@media (max-width: $tablet) {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 40, 20, 0, 991.98, 480);
+			}
+		}
+		@media (min-width: $tablet) {
+			position: sticky;
+			left: 0;
+			@include adaptiveValue("top", 110, 80, 0, $containerWidth, 992);
+			overflow: hidden;
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: flex-start;
+			gap: toRem(14);
+		}
 	}
 	&__slider {
-		flex-basis: toRem(430);
+		@media (max-width: $tablet) {
+			max-width: toRem(600);
+			margin-left: 0;
+			margin-right: 0;
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
+		}
+		@media (min-width: $tablet) {
+			flex-basis: toRem(444);
+		}
 	}
 	&__thumbs {
-		flex-basis: toRem(152);
+		@media (min-width: $tablet) {
+			@include adaptiveValue("flex-basis", 152, 130, 0, $containerWidth, 992);
+			padding-top: toRem(1);
+		}
 	}
 	&__right {
 		& > * {
@@ -41,19 +64,28 @@
 	}
 	&__name {
 		&:not(:last-child) {
-			margin-bottom: toRem(14);
+			margin-bottom: toRem(20);
 		}
 	}
 	&__actions {
 		display: flex;
 		gap: toRem(20);
+		@media (max-width: $mobileExtraSmall) {
+			flex-direction: column;
+		}
 	}
 	&__quantity {
-		flex-basis: toRem(170);
 		gap: toRem(35);
 		padding: toRem(16) toRem(20);
 		.quantity__input {
-			flex-basis: toRem(20);
+			flex-basis: toRem(30);
+		}
+		@media (max-width: $tablet) {
+			gap: toRem(16);
+			padding: toRem(12) toRem(16);
+		}
+		@media (min-width: $mobileExtraSmall) {
+			@include adaptiveValue("flex-basis", 180, 130, 0, 767.98, 480);
 		}
 	}
 	&__button {
@@ -62,6 +94,37 @@
 }
 
 .slider-product {
+	@media (any-hover: hover) {
+		&:hover {
+			.nav-product-slider__button {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&__pagination {
+		display: none;
+		position: absolute;
+		z-index: 2;
+		left: 50%;
+		bottom: 6%;
+		width: unset;
+		transform: translateX(-50%);
+		.swiper-pagination-bullet {
+			width: toRem(8);
+			height: toRem(8);
+			background-color: var(--white);
+			&:not(:last-child) {
+				margin-right: toRem(6);
+			}
+		}
+		.swiper-pagination-bullet-active {
+			background-color: var(--primary);
+		}
+		@media (max-width: $tablet) {
+			display: block;
+		}
+	}
 	&__img {
 		overflow: hidden;
 		aspect-ratio: 444 / 530;
@@ -75,12 +138,60 @@
 	}
 }
 
+.nav-product-slider {
+	&__button {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: toRem(30);
+		height: toRem(30);
+		opacity: 0;
+		visibility: hidden;
+		border-radius: 50%;
+		background-color: var(--white);
+		transition:
+			background 0.3s ease-in-out,
+			opacity 0.3s ease-in-out,
+			visibility 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--primary);
+				svg {
+					stroke: var(--white);
+				}
+			}
+		}
+		svg {
+			width: toRem(20);
+			height: toRem(20);
+			stroke: var(--primary);
+			transition: stroke 0.3s ease-in-out;
+		}
+	}
+	&__button--prev {
+		left: 2%;
+	}
+	&__button--next {
+		right: 2%;
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+}
+
 .thumbs-product {
-	&__wrapper {
+	@media (min-width: $tablet) {
+		@include adaptiveValue("max-height", 530, 370, 0, $containerWidth, 992);
+		overflow: hidden;
 	}
 	&__slide {
-		max-height: toRem(168);
-		cursor: pointer;
+		@media (min-width: $tablet) {
+			@include adaptiveValue("flex-basis", 167, 110, 0, $containerWidth, 992);
+		}
 	}
 	.swiper-slide-thumb-active {
 		.thumbs-product__img {
@@ -91,6 +202,7 @@
 		overflow: hidden;
 		aspect-ratio: 152 / 167;
 		border-radius: toRem(20);
+		object-fit: contain;
 		background-color: #f0eeed;
 		border: toRem(1) solid transparent;
 		transition: border-color 0.3s ease-in-out;
@@ -136,7 +248,7 @@
 	}
 	&__current,
 	&__old {
-		font-size: toRem(32);
+		@include adaptiveValue("font-size", 32, 24, 0, $containerWidth, 480);
 		font-weight: 700;
 	}
 	&__old {
@@ -158,14 +270,16 @@
 			margin-bottom: toRem(16);
 		}
 	}
-	&__colors {
-		display: flex;
-		align-items: center;
-		gap: toRem(16);
-	}
+	&__colors,
 	&__sizes {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
+	}
+	&__colors {
+		gap: toRem(16);
+	}
+	&__sizes {
 		gap: toRem(12);
 	}
 }
