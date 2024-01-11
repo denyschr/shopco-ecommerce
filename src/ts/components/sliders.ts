@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Navigation, Autoplay, Thumbs } from "swiper/modules";
 
 if (document.querySelector(".testimonials__slider")) {
   const slider: Swiper = new Swiper(".testimonials__slider", {
@@ -33,6 +33,29 @@ if (document.querySelector(".testimonials__slider")) {
       320: {
         slidesPerView: 1,
       },
+    },
+  });
+}
+
+if (
+  document.querySelector(".slider-product") &&
+  document.querySelector(".thumbs-product")
+) {
+  const thumbsSlider: Swiper = new Swiper(".thumbs-product", {
+    modules: [Thumbs],
+    spaceBetween: 14,
+    slidesPerView: 3,
+    freeMode: true,
+    direction: "vertical",
+    watchSlidesProgress: true,
+  });
+  const sliderProduct: Swiper = new Swiper(".slider-product", {
+    modules: [Thumbs],
+    loop: true,
+    spaceBetween: 14,
+    speed: 800,
+    thumbs: {
+      swiper: thumbsSlider,
     },
   });
 }

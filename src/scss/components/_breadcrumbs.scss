@@ -2,19 +2,19 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: toRem(5);
+	gap: toRem(12);
 	&__item {
 		position: relative;
 		&:not(:last-child) {
-			padding-right: toRem(25);
+			padding-right: toRem(20);
 			&::after {
 				content: "";
 				position: absolute;
 				right: 0;
 				top: 50%;
 				transform: translateY(-50%);
-				width: toRem(18);
-				height: toRem(18);
+				width: toRem(20);
+				height: toRem(20);
 				background: url("../icons/arrow-right.svg") center no-repeat;
 			}
 		}
@@ -23,11 +23,12 @@
 		transition: color 0.3s ease-in-out;
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--brandy);
+				color: var(--primary);
 			}
 		}
-		&--active {
+		&._active {
 			pointer-events: none;
+			color: var(--primary);
 		}
 	}
 }

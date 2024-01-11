@@ -43,7 +43,7 @@
 	&__logo {
 		position: relative;
 		z-index: 21;
-		padding-bottom: toRem(5);
+		padding-bottom: toRem(3);
 	}
 	&__menu {
 		@media (max-width: $tablet) {

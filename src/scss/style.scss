@@ -15,7 +15,10 @@
 // @import "./components/go-to-top";
 // @import "./components/preloader";
 // @import "./components/popups";
-// @import "./components/breadcrumbs";
+@import "./components/breadcrumbs";
+@import "./components/color-option";
+@import "./components/size-option";
+@import "./components/quantity";
 
 // Libs
 @import "./libs/swiper";
@@ -31,5 +34,6 @@
 @import "./partials/dress-style";
 @import "./partials/feedback-card";
 @import "./partials/testimonials";
+@import "./partials/product";
 @import "./partials/newsletter";
 @import "./partials/footer";

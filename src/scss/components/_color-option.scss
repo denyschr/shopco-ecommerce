@@ -1,0 +1,59 @@
+.color-option {
+	&__input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		&:focus-visible + .color-option__label {
+			box-shadow: 0 0 toRem(5) #000;
+		}
+		&:checked + .color-option__label {
+			pointer-events: none;
+			&::before {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&__label {
+		position: relative;
+		display: inline-block;
+		width: toRem(37);
+		height: toRem(37);
+		border-radius: 50%;
+		transition: opacity 0.3s ease-in-out;
+		cursor: pointer;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			visibility: hidden;
+			width: toRem(16);
+			height: toRem(16);
+			background: url("../icons/tick.svg") center no-repeat;
+			transition:
+				opacity 0.3s ease-in-out,
+				visibility 0.3s ease-in-out;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		&--brown {
+			background-color: #4f4631;
+		}
+		&--dark-green {
+			background-color: #314f4a;
+		}
+		&--purple {
+			background-color: #31344f;
+		}
+		&--border {
+			border: toRem(2) solid rgba(0, 0, 0, 0.2);
+		}
+	}
+}

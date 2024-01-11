@@ -19,7 +19,6 @@
 		}
 	}
 	&__title {
-		@include adaptiveValue("font-size", 40, 24, 0, $containerWidth, 480);
 		line-height: 1.2;
 		color: var(--white);
 		@media (max-width: $mobile) {

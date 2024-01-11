@@ -17,7 +17,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "./index.html",
-        // example: './example.html', other pages
+        product: "./product.html",
       },
     },
   },

@@ -1,0 +1,65 @@
+.quantity {
+	display: flex;
+	align-items: center;
+	border-radius: toRem(62);
+	background-color: var(--gallery);
+	&__button {
+		position: relative;
+		flex: 0 0 toRem(20);
+		min-height: toRem(20);
+		cursor: pointer;
+		transition: color 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--secondary);
+			}
+		}
+		&--plus {
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				border-radius: toRem(4);
+				background-color: currentColor;
+			}
+			&::before {
+				left: 0;
+				top: 50%;
+				width: 100%;
+				transform: translateY(-50%);
+				height: toRem(2);
+			}
+			&::after {
+				left: 50%;
+				top: 0;
+				height: 100%;
+				transform: translateX(-50%);
+				width: toRem(2);
+			}
+		}
+		&--minus {
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: toRem(-1);
+				width: 100%;
+				height: toRem(2);
+				border-radius: toRem(4);
+				background-color: currentColor;
+			}
+		}
+	}
+	&__input {
+		flex: 1 1 auto;
+		background-color: transparent;
+		input {
+			text-align: center;
+			width: 100%;
+			background-color: transparent;
+			font-weight: 500;
+			outline: none;
+		}
+	}
+}

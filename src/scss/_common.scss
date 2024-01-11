@@ -17,6 +17,10 @@
 	text-align: center;
 }
 
+.section-title--fs-40 {
+	@include adaptiveValue("font-size", 40, 24, 0, $containerWidth, 480);
+}
+
 .section-title--fs-48 {
 	@include adaptiveValue("font-size", 48, 32, 0, $containerWidth, 480);
 }
