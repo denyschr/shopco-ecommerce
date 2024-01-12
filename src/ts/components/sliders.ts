@@ -138,7 +138,11 @@ const resizableSlider = (
 
 resizableSlider(
   "(max-width: 991.98px)",
-  [".products__slider--arrival", ".products__slider--selling"],
+  [
+    ".products__slider--arrival",
+    ".products__slider--selling",
+    ".products__slider--recommendations",
+  ],
   {
     spaceBetween: 20,
     freeMode: true,

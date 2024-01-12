@@ -64,6 +64,9 @@
 			background-color: transparent;
 			font-weight: 500;
 			outline: none;
+			&:focus-visible {
+				box-shadow: none;
+			}
 		}
 	}
 }

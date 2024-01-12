@@ -1,4 +1,7 @@
 import "../scss/style.scss";
+// Focus-visible
+import "./libs/focus-visible";
+
 // Menu
 import menuInit from "./components/menu";
 menuInit();
@@ -28,14 +31,14 @@ import Quantity from "./components/quantity";
 const quantity = new Quantity();
 
 // Tabs
-// import GrapthTabs from './components/tabs';
-// const tabs = new GrapthTabs();
+import GrapthTabs from "./components/tabs";
+const tabs = new GrapthTabs();
 
 // Spoilers
 import "./libs/spoilers";
 
 // Select
-// import './libs/select';
+import "./libs/select";
 
 // Popup
 // import Popup from './components/popup';
@@ -50,6 +53,10 @@ import "./components/animated-counter";
 // Infinite slider
 import infiniteSlider from "./components/infinite-slider";
 infiniteSlider();
+
+// Show more
+import showMore from "./components/show-more";
+showMore();
 
 const dropdowns: NodeListOf<HTMLElement> =
   document.querySelectorAll("[data-dropdown]");

@@ -1,36 +1,55 @@
 .select {
 	min-width: 0;
 	position: relative;
+	&_reviews-product {
+		min-width: toRem(130);
+		@media (max-width: $mobile) {
+			display: none;
+		}
+		.select__title {
+			border-radius: toRem(62);
+			background-color: var(--gallery);
+			transition: background 0.3s ease-in-out;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: #d9d9d9;
+				}
+			}
+		}
+		.select__value {
+			height: toRem(48);
+			padding: 0 toRem(20);
+			gap: toRem(20);
+			font-weight: 500;
+			&::after {
+				flex: 0 0 toRem(16);
+				background: url("../icons/arrow-down.svg") center no-repeat;
+			}
+		}
+	}
 	&__body {
 		position: relative;
 	}
 	&__title {
+		width: 100%;
 		color: inherit;
 		text-align: left;
-		border: 1px solid #d9d9d9;
-		background-color: #fff;
 		cursor: pointer;
-		width: 100%;
-		border-radius: 4px;
 	}
 	&__value {
 		display: flex;
 		min-width: 0;
 		align-items: center;
-		height: toRem(30);
-		padding: 0 toRem(15);
-		gap: toRem(10);
 		> * {
 			flex: 1 1 auto;
 		}
 		&:after {
 			content: "";
-			align-self: stretch;
-			flex: 0 0 10px;
-			transition: all 0.3s ease 0s;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			align-self: stretch;
+			transition: transform 0.3s ease-in-out;
 			._select-open & {
 				transform: rotate(-180deg);
 			}
@@ -60,17 +79,16 @@
 		height: 100%;
 	}
 	&__options {
-		color: #000;
 		position: absolute;
-		top: calc(100% - toRem(1));
-		border-radius: 0 0 4px 4px;
+		top: calc(110% - toRem(1));
+		border-radius: toRem(8);
 		min-width: 100%;
 		left: 0;
-		background-color: #fff;
+		background-color: var(--gallery);
 		border-top: 0;
-		border: 1px solid #d9d9d9;
 		border-top: 0;
 		padding: toRem(10) 0 toRem(5) 0;
+		font-weight: 500;
 	}
 	&__scroll {
 		overflow-y: auto;

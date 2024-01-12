@@ -5,7 +5,7 @@
 		opacity: 0;
 		position: absolute;
 		&:focus-visible + .size-option__label {
-			box-shadow: 0 0 toRem(5) #000;
+			box-shadow: 0 0 0 toRem(2) #f33;
 		}
 		&:checked + .size-option__label {
 			pointer-events: none;

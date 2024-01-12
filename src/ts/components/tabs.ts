@@ -31,12 +31,13 @@ class GrapthTabs {
         };
         this.tabsDetails.push(tabDetails);
       });
+
+      this.check();
+      this.init();
+      this.events();
     } catch {
       console.error("Tabs not found");
     }
-    this.check();
-    this.init();
-    this.events();
   }
   check() {
     this.tabsDetails.forEach((tabDetails): void => {
@@ -48,7 +49,6 @@ class GrapthTabs {
   init(): void {
     this.tabsDetails.forEach((tabDetails): void => {
       tabDetails.tabsNav.setAttribute("role", "tablist");
-
       tabDetails.tabsBtns.forEach((tabsBtn, index): void => {
         tabsBtn.setAttribute("role", "tab");
         tabsBtn.setAttribute("tabindex", String(-1));
@@ -75,7 +75,7 @@ class GrapthTabs {
     this.tabsDetails.forEach((tabDetails): void => {
       tabDetails.tabsBtns.forEach((tabBtn, index): void => {
         tabBtn.addEventListener("click", (e): void => {
-          let currentTab = tabDetails.tabsNav.querySelector(
+          const currentTab = tabDetails.tabsNav.querySelector(
             "[aria-selected]",
           ) as HTMLButtonElement;
           if (e.currentTarget !== currentTab) {
@@ -87,7 +87,7 @@ class GrapthTabs {
           }
         });
         tabBtn.addEventListener("keydown", (e): void => {
-          let currentIndex = Array.prototype.indexOf.call(
+          const currentIndex = Array.prototype.indexOf.call(
             tabDetails.tabsBtns,
             e.currentTarget,
           );
@@ -138,11 +138,15 @@ class GrapthTabs {
     oldTab.setAttribute("tabindex", String(-1));
 
     const currentTabDetails: TabDetails = this.tabsDetails[id];
-    let newIndex: number;
-    let oldIndex: number;
 
-    newIndex = Array.prototype.indexOf.call(currentTabDetails.tabsBtns, newTab);
-    oldIndex = Array.prototype.indexOf.call(currentTabDetails.tabsBtns, oldTab);
+    const newIndex: number = Array.prototype.indexOf.call(
+      currentTabDetails.tabsBtns,
+      newTab,
+    );
+    const oldIndex: number = Array.prototype.indexOf.call(
+      currentTabDetails.tabsBtns,
+      oldTab,
+    );
 
     currentTabDetails.tabsPanels[oldIndex].classList.remove("_tab-active");
     currentTabDetails.tabsPanels[newIndex].classList.add("_tab-active");
