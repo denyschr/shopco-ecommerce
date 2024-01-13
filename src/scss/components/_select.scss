@@ -21,9 +21,18 @@
 			padding: 0 toRem(20);
 			gap: toRem(20);
 			font-weight: 500;
-			&::after {
-				flex: 0 0 toRem(16);
-				background: url("../icons/arrow-down.svg") center no-repeat;
+		}
+	}
+	&_sort-settings {
+		min-width: toRem(120);
+		.select__value {
+			gap: toRem(4);
+			font-weight: 500;
+			transition: color 0.3s ease-in-out;
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--secondary);
+				}
 			}
 		}
 	}
@@ -40,6 +49,7 @@
 		display: flex;
 		min-width: 0;
 		align-items: center;
+		line-height: 1.2;
 		> * {
 			flex: 1 1 auto;
 		}
@@ -49,6 +59,8 @@
 			justify-content: center;
 			align-items: center;
 			align-self: stretch;
+			flex: 0 0 toRem(16);
+			background: url("../icons/arrow-down.svg") center no-repeat;
 			transition: transform 0.3s ease-in-out;
 			._select-open & {
 				transform: rotate(-180deg);

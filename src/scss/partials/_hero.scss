@@ -21,7 +21,7 @@
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 48, 28, 0, $containerWidth, 992);
 		}
-		@media (max-width: $mobileSmall) {
+		@media (max-width: $mobile) {
 			width: 100%;
 		}
 	}

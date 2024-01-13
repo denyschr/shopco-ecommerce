@@ -102,6 +102,12 @@
 			.nav-product-slider__button {
 				opacity: 1;
 				visibility: visible;
+				&--prev {
+					left: 2%;
+				}
+				&--next {
+					right: 2%;
+				}
 			}
 		}
 	}
@@ -162,10 +168,7 @@
 		visibility: hidden;
 		border-radius: 50%;
 		background-color: var(--white);
-		transition:
-			background 0.3s ease-in-out,
-			opacity 0.3s ease-in-out,
-			visibility 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: var(--primary);
@@ -182,10 +185,10 @@
 		}
 	}
 	&__button--prev {
-		left: 2%;
+		left: -2%;
 	}
 	&__button--next {
-		right: 2%;
+		right: -2%;
 		svg {
 			transform: rotate(180deg);
 		}

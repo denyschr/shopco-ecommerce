@@ -75,12 +75,12 @@
 }
 
 .noUi-horizontal {
-	height: toRem(3);
+	height: toRem(6);
 }
 
 .noUi-horizontal .noUi-handle {
-	width: toRem(18);
-	height: toRem(18);
+	width: toRem(20);
+	height: toRem(20);
 	right: toRem(-14);
 	top: toRem(-7);
 }
@@ -93,13 +93,6 @@
 	width: toRem(18);
 }
 
-.noUi-vertical .noUi-handle {
-	width: 28px;
-	height: 34px;
-	right: -6px;
-	bottom: -17px;
-}
-
 .noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
 	left: -17px;
 	right: auto;
@@ -107,7 +100,7 @@
 
 .noUi-target {
 	border-radius: toRem(4);
-	background-color: var(--secondary);
+	background-color: var(--gallery);
 }
 
 .noUi-connects {
@@ -115,7 +108,7 @@
 }
 
 .noUi-connect {
-	background-color: var(--purple);
+	background-color: var(--primary);
 }
 
 .noUi-draggable {
@@ -127,24 +120,9 @@
 }
 
 .noUi-handle {
-	border-radius: 100%;
-	background-color: var(--purple);
+	border-radius: 50%;
+	background-color: var(--primary);
 	cursor: default;
-}
-
-// .noUi-active {
-// }
-
-.noUi-vertical .noUi-handle:before,
-.noUi-vertical .noUi-handle:after {
-	width: 14px;
-	height: 1px;
-	left: 6px;
-	top: 14px;
-}
-
-.noUi-vertical .noUi-handle:after {
-	top: 17px;
 }
 
 [disabled] .noUi-connect {
@@ -253,19 +231,16 @@
 .noUi-tooltip {
 	display: block;
 	position: absolute;
-	border-radius: toRem(3);
-	border: toRem(1) solid #d6b88d;
-	background-color: #2b2825;
-	padding: toRem(5);
 	text-align: center;
 	white-space: nowrap;
-	font-size: toRem(12);
+	font-size: toRem(14);
+	font-weight: 500;
 }
 
 .noUi-horizontal .noUi-tooltip {
 	transform: translate(-50%, 0);
 	left: 50%;
-	bottom: 120%;
+	top: 130%;
 }
 
 .noUi-vertical .noUi-tooltip {

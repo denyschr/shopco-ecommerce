@@ -43,7 +43,7 @@
 }
 
 .title--fs-32 {
-	font-size: toRem(32);
+	@include adaptiveValue("font-size", 32, 24, 0, $containerWidth, 480);
 }
 
 .title--fs-36 {

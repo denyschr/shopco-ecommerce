@@ -18,6 +18,7 @@ export default defineConfig({
       input: {
         main: "./index.html",
         product: "./product.html",
+        category: "./category.html",
       },
     },
   },

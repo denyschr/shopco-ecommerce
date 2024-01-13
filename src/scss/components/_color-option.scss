@@ -8,7 +8,6 @@
 			box-shadow: 0 0 0 toRem(2) #f33;
 		}
 		&:checked + .color-option__label {
-			pointer-events: none;
 			&::before {
 				opacity: 1;
 				visibility: visible;
@@ -49,11 +48,44 @@
 		&--dark-green {
 			background-color: #314f4a;
 		}
-		&--purple {
+		&--dark-purple {
 			background-color: #31344f;
 		}
+		&--green {
+			background-color: #00c12b;
+		}
+		&--red {
+			background-color: #f50606;
+		}
+		&--yellow {
+			background-color: #f5dd06;
+		}
+		&--orange {
+			background-color: #f57906;
+		}
+		&--light-blue {
+			background-color: #06caf5;
+		}
+		&--blue {
+			background-color: #063af5;
+		}
+		&--purple {
+			background-color: #7d06f5;
+		}
+		&--pink {
+			background-color: #f506a4;
+		}
+		&--white {
+			background-color: #fff;
+			&::before {
+				background: url("../icons/tick-black.svg") center no-repeat;
+			}
+		}
+		&--black {
+			background-color: #000;
+		}
 		&--border {
-			border: toRem(2) solid rgba(0, 0, 0, 0.2);
+			border: toRem(1) solid rgba(0, 0, 0, 0.2);
 		}
 	}
 }

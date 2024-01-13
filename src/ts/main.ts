@@ -18,13 +18,13 @@ import "./libs/dynamic-adaptive";
 // goToTopInit();
 
 // Simplebar
-// import './components/simplebar';
+// import "./components/simplebar";
 
 // Slider
 import "./components/sliders";
 
 // Range
-// import './libs/range';
+import "./libs/range";
 
 // Quantity
 import Quantity from "./components/quantity";
@@ -95,4 +95,23 @@ headerSearchIcon.addEventListener("click", (): void => {
 headerSearchClose.addEventListener("click", (): void => {
   document.body.classList.remove("locked");
   headerSearchForm.classList.remove("_active");
+});
+
+// const filterCatalog = document.querySelector('.filter-catalog')
+const filterButton = document.querySelector(
+  ".settings-category__filter",
+) as HTMLButtonElement;
+
+const filterButtonClose = document.querySelector(
+  ".filter-catalog__close-button",
+) as HTMLButtonElement;
+
+filterButton.addEventListener("click", (): void => {
+  document.documentElement.classList.add("_filter-open");
+  document.body.classList.add("locked");
+});
+
+filterButtonClose.addEventListener("click", (): void => {
+  document.documentElement.classList.remove("_filter-open");
+  document.body.classList.remove("locked");
 });
