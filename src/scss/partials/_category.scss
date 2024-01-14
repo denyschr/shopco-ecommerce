@@ -166,7 +166,7 @@
 		padding-top: toRem(20);
 	}
 	&__price {
-		padding-bottom: toRem(35);
+		padding: 0 toRem(8) toRem(35);
 	}
 	&__colors {
 		display: grid;

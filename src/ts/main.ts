@@ -58,60 +58,8 @@ infiniteSlider();
 import showMore from "./components/show-more";
 showMore();
 
-const dropdowns: NodeListOf<HTMLElement> =
-  document.querySelectorAll("[data-dropdown]");
+// Dropdown
+import "./components/dropdown";
 
-if (dropdowns.length) {
-  dropdowns.forEach((dropdown): void => {
-    dropdown.addEventListener("click", (e): void => {
-      dropdown.classList.toggle("_active");
-      e.preventDefault();
-    });
-    window.addEventListener("click", (e): void => {
-      if (e.target !== dropdown) {
-        dropdown.classList.remove("_active");
-      }
-    });
-  });
-}
-
-const headerSearchIcon = document.getElementById(
-  "search-icon",
-) as HTMLButtonElement;
-
-const headerSearchForm = document.querySelector(
-  ".search-header",
-) as HTMLFormElement;
-
-const headerSearchClose = headerSearchForm.querySelector(
-  ".search-header__button",
-) as HTMLButtonElement;
-
-headerSearchIcon.addEventListener("click", (): void => {
-  document.body.classList.add("locked");
-  headerSearchForm.classList.add("_active");
-});
-
-headerSearchClose.addEventListener("click", (): void => {
-  document.body.classList.remove("locked");
-  headerSearchForm.classList.remove("_active");
-});
-
-// const filterCatalog = document.querySelector('.filter-catalog')
-const filterButton = document.querySelector(
-  ".settings-category__filter",
-) as HTMLButtonElement;
-
-const filterButtonClose = document.querySelector(
-  ".filter-catalog__close-button",
-) as HTMLButtonElement;
-
-filterButton.addEventListener("click", (): void => {
-  document.documentElement.classList.add("_filter-open");
-  document.body.classList.add("locked");
-});
-
-filterButtonClose.addEventListener("click", (): void => {
-  document.documentElement.classList.remove("_filter-open");
-  document.body.classList.remove("locked");
-});
+// Custom scripts
+import "./components/script";
