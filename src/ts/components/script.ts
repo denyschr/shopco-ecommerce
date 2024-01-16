@@ -10,7 +10,7 @@ const headerSearchClose = headerSearchForm.querySelector(
   ".search-header__button",
 ) as HTMLButtonElement;
 
-if (headerSearchIcon && headerSearchClose) {
+if (headerSearchIcon && headerSearchForm && headerSearchClose) {
   headerSearchIcon.addEventListener("click", (): void => {
     document.body.classList.add("locked");
     headerSearchForm.classList.add("_active");

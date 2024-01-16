@@ -65,7 +65,6 @@ if (
     modules: [Pagination, Navigation, Thumbs],
     loop: true,
     spaceBetween: 14,
-    grabCursor: true,
     speed: 800,
     pagination: {
       el: ".slider-product__pagination",

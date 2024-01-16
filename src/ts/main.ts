@@ -55,11 +55,15 @@ import infiniteSlider from "./components/infinite-slider";
 infiniteSlider();
 
 // Show more
-import showMore from "./components/show-more";
+import showMore from "./components/showmore";
 showMore();
 
 // Dropdown
 import "./components/dropdown";
+
+// Goods rendering
+import GoodsRendering from "./components/goods-rendering";
+const goods = new GoodsRendering();
 
 // Custom scripts
 import "./components/script";

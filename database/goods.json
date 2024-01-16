@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1,
+    "partNumber": "w00001",
+    "name": "Gradient Graphic T-shirt",
+    "image": "gradient-graphic-t-shirt.webp",
+    "image2x": "gradient-graphic-t-shirt_2x.webp",
+    "rating": 3.5,
+    "price": 145,
+    "color": "Brown",
+    "size": "Large"
+  },
+  {
+    "id": 2,
+    "partNumber": "w00002",
+    "name": "Polo with Tipping Details",
+    "image": "polo-with-tipping-details.webp",
+    "image2x": "polo-with-tipping-details_2x.webp",
+    "rating": 4.5,
+    "price": 180,
+    "color": "Dark green",
+    "size": "Medium"
+  },
+  {
+    "id": 3,
+    "partNumber": "w00003",
+    "name": "Black Striped T-shirt",
+    "image": "black-striped-t-shirt.webp",
+    "image2x": "black-striped-t-shirt_2x.webp",
+    "rating": 5,
+    "price": 120,
+    "oldPrice": 150,
+    "discount": -30,
+    "color": "Black",
+    "size": "XX-large"
+  },
+  {
+    "id": 4,
+    "partNumber": "w00004",
+    "name": "Skinny Fit Jeans",
+    "image": "skinny-fit-jeans.webp",
+    "image2x": "skinny-fit-jeans_2x.webp",
+    "rating": 3.5,
+    "price": 240,
+    "oldPrice": 260,
+    "discount": -20,
+    "color": "Blue",
+    "size": "Medium"
+  },
+  {
+    "id": 5,
+    "partNumber": "w00005",
+    "name": "Checkered Shirt",
+    "image": "checkered-shirt.webp",
+    "image2x": "checkered-shirt_2x.webp",
+    "rating": 4.5,
+    "price": 180,
+    "color": "Purple",
+    "size": "Large"
+  },
+  {
+    "id": 6,
+    "partNumber": "w00006",
+    "name": "Sleeve Striped T-shirt",
+    "image": "sleeve-striped-t-shirt.webp",
+    "image2x": "sleeve-striped-t-shirt_2x.webp",
+    "rating": 4.5,
+    "price": 130,
+    "oldPrice": 160,
+    "discount": -30,
+    "color": "Orange",
+    "size": "X-large"
+  },
+  {
+    "id": 7,
+    "partNumber": "w00007",
+    "name": "Vertical Striped Shirt",
+    "image": "vertical-striped-shirt.webp",
+    "image2x": "vertical-striped-shirt_2x.webp",
+    "rating": 5,
+    "price": 212,
+    "oldPrice": 232,
+    "discount": -20,
+    "color": "Green",
+    "size": "XX-large"
+  },
+  {
+    "id": 8,
+    "partNumber": "w00008",
+    "name": "Courage Graphic T-shirt",
+    "image": "courage-graphic-t-shirt.webp",
+    "image2x": "courage-graphic-t-shirt_2x.webp",
+    "rating": 4,
+    "price": 145,
+    "color": "Orange",
+    "size": "3X-large"
+  },
+  {
+    "id": 9,
+    "partNumber": "w00009",
+    "name": "Loose Fit Bermuda Shorts",
+    "image": "loose-fit-bermuda-shorts.webp",
+    "image2x": "loose-fit-bermuda-shorts_2x.webp",
+    "rating": 3,
+    "price": 80,
+    "color": "Blue",
+    "size": "4X-large"
+  }
+]

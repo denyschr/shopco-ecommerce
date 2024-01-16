@@ -7,7 +7,11 @@ function menuInit() {
     ".top-banner__close",
   ) as HTMLButtonElement;
 
-  const timeout: number = Number(header.dataset.timeout);
+  let timeout: number = 500; // default value
+
+  if (header.hasAttribute("data-timeout")) {
+    timeout = parseFloat(header.dataset.timeout!);
+  }
 
   function topBannerHandle(): void {
     setTimeout((): void => {

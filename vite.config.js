@@ -19,8 +19,9 @@ export default defineConfig({
         main: "./index.html",
         product: "./product.html",
         category: "./category.html",
+        cart: "./cart.html",
       },
     },
   },
-  base: "/shopco-ecommerce/",
+  // base: "/shopco-ecommerce/",
 });

@@ -80,9 +80,6 @@
 	&__quantity {
 		gap: toRem(35);
 		padding: toRem(16) toRem(20);
-		.quantity__input {
-			flex-basis: toRem(30);
-		}
 		@media (max-width: $tablet) {
 			gap: toRem(16);
 			padding: toRem(12) toRem(16);

@@ -1,8 +1,8 @@
 function showMore(): void {
   const showMoreContent: NodeListOf<HTMLUListElement> =
-    document.querySelectorAll("[data-show-more]");
+    document.querySelectorAll("[data-showmore]");
   const showMoreButtons: NodeListOf<HTMLButtonElement> =
-    document.querySelectorAll("[data-show-more-button]");
+    document.querySelectorAll("[data-showmore-button]");
 
   let initialLengthOfItems: number = 6;
 
