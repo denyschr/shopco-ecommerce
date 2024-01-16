@@ -23,5 +23,5 @@ export default defineConfig({
       },
     },
   },
-  // base: "/shopco-ecommerce/",
+  base: "/shopco-ecommerce/",
 });
