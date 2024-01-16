@@ -1,4 +1,4 @@
-# [SHOP.CO - ECOMMERCE WEBSITE]()
+# [SHOP.CO - RESPONSIVE ECOMMERCE WEBSITE](https://denyschr.github.io/shopco-ecommerce/index.html)
 
 ![screenshot](demo/homepage.jpg)
 
@@ -12,10 +12,10 @@
 
 ## Pages
 
-[Main page]()
+[Home page](https://denyschr.github.io/shopco-ecommerce/index.html)
 
-[Product page]()
+[Product page](https://denyschr.github.io/shopco-ecommerce/product.html)
 
-[Category page]()
+[Category page](https://denyschr.github.io/shopco-ecommerce/category.html)
 
-[Cart page]()
+[Cart page](https://denyschr.github.io/shopco-ecommerce/cart.html)
