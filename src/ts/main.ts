@@ -61,9 +61,5 @@ showMore();
 // Dropdown
 import "./components/dropdown";
 
-// Goods rendering
-import GoodsRendering from "./components/goods-rendering";
-const goods = new GoodsRendering();
-
 // Custom scripts
 import "./components/script";
