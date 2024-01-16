@@ -1,11 +1,13 @@
 function animateCounter(
   counter: HTMLElement,
   endValue: number,
+  time: number,
   symbol: string,
 ) {
-  const duration: number = 3500;
   const frameDuration: number = 1000 / 60;
-  const totalFrames: number = Math.round(duration / frameDuration);
+
+  const totalFrames: number = Math.round(time / frameDuration);
+
   let frame: number = 0;
 
   function animate() {
@@ -13,18 +15,12 @@ function animateCounter(
     const currentValue: number = Math.round(progress * endValue);
     counter.textContent = currentValue + symbol;
     frame++;
-
     if (frame <= totalFrames) {
       requestAnimationFrame(animate);
     }
   }
-
   animate();
 }
-
-const counters: NodeListOf<HTMLElement> = document.querySelectorAll(
-  "[data-animate-counter]",
-);
 
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
@@ -35,11 +31,16 @@ const observer = new IntersectionObserver((entries, observer) => {
       );
       const symbol: string = counter.textContent!.replace(/[0-9]/g, "");
 
-      animateCounter(counter, endValue, symbol);
+      animateCounter(counter, endValue, 3500, symbol);
+
       observer.unobserve(counter);
     }
   });
 });
+
+const counters: NodeListOf<HTMLElement> = document.querySelectorAll(
+  "[data-animate-counter]",
+);
 
 counters.forEach((counter) => {
   observer.observe(counter);

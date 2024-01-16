@@ -86,6 +86,7 @@
 		opacity: 0;
 		visibility: hidden;
 		background-color: var(--gallery);
+		box-shadow: 0 0 toRem(2) #000;
 		border-radius: toRem(8);
 		transition:
 			opacity 0.3s ease-in-out,

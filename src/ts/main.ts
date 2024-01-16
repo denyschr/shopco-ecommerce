@@ -61,5 +61,8 @@ showMore();
 // Dropdown
 import "./components/dropdown";
 
+// Progress circle animation
+import "./components/progress-circle";
+
 // Custom scripts
 import "./components/script";

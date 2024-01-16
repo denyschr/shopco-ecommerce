@@ -4,10 +4,10 @@ const dropdowns: NodeListOf<HTMLElement> =
 if (dropdowns.length) {
   dropdowns.forEach((dropdown): void => {
     dropdown.addEventListener("click", (e): void => {
-      dropdown.classList.toggle("_active");
       e.preventDefault();
+      dropdown.classList.toggle("_active");
     });
-    window.addEventListener("click", (e): void => {
+    document.addEventListener("click", (e): void => {
       if (e.target !== dropdown) {
         dropdown.classList.remove("_active");
       }
