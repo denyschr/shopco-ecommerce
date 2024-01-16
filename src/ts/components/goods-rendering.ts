@@ -22,7 +22,7 @@ class GoodsRendering {
   }
 
   async getGoods(): Promise<void> {
-    const response = await fetch("database/goods.json");
+    const response = await fetch("goods.json");
     if (!response.ok) {
       const message: string = `Error: ${response.status}`;
       throw new Error(message);
