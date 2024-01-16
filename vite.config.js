@@ -20,6 +20,7 @@ export default defineConfig({
         product: "./product.html",
         category: "./category.html",
         cart: "./cart.html",
+        database: "./database",
       },
     },
   },
